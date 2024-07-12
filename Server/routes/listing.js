@@ -8,7 +8,7 @@ const {storage} = require("../cloudConfig.js");
 const upload = multer({storage});
 
 router
-    .route("/")
+    .route("/")  // Listings won't be rendered on root route check the Figma design
     .get(wrapAsync(listingController.showAllListings))
     .post(
         isLoggedIn,  
