@@ -1,4 +1,4 @@
-const Restaurant = require("../models/restaurant");
+const Restaurant = require("../models/home");
 
 module.exports.showHomePage = async (req, res) => {
     const restaurants = await Restaurant.find({});
