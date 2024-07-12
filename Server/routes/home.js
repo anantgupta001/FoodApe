@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const hc = require("../controllers/home");
+const homeController = require("../controllers/home");
 
-router.get("/", hc.showHomePage);
-router.get("/search", hc.searchFood);
+router.get("/", homeController.showHomePage);
+router.get("/search", homeController.searchFood);
 
 module.exports = router;
