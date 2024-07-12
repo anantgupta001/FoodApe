@@ -1,3 +1,5 @@
+// All the routes here are invalid. Listings are supposed to be rendered for different restaurants individually. (Check the Figma design) 
+
 const express = require("express");
 const router = express.Router();
 const wrapAsync = require("../utils/wrapAsync");
