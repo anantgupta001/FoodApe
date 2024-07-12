@@ -9,15 +9,15 @@ const multer = require("multer");
 const {storage} = require("../cloudConfig.js");
 const upload = multer({storage});
 
-router
-    .route("/")  // Listings won't be rendered on root route check the Figma design
-    .get(wrapAsync(listingController.showAllListings))
-    .post(
-        isLoggedIn,  
-        upload.single("listing[image]"),
-        validateListing,
-        wrapAsync(listingController.createListing)
-    )
+// router
+//     .route("/")  // Listings won't be rendered on root route check the Figma design
+//     .get(wrapAsync(listingController.showAllListings))
+//     .post(
+//         isLoggedIn,  
+//         upload.single("listing[image]"),
+//         validateListing,
+//         wrapAsync(listingController.createListing)
+//     )
 
 router.get(
     "/new", 
