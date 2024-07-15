@@ -8,7 +8,6 @@ const path = require("path");
 const methodOverride = require("method-override");
 
 const messmenuRouter = require("./routes/messmenu.js");
-const homeRouter = require("./routes/home.js");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
@@ -27,7 +26,6 @@ app.get("/", (req, res) => {
 });
 
 app.use("/messmenu", messmenuRouter);
-app.use("/home", homeRouter);
 
 app.listen(process.env.PORT, () => {
     console.log("Server is listening...");
