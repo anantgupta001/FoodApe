@@ -1,4 +1,4 @@
-if(process.env.NODE_ENV != 'production'){
+if (process.env.NODE_ENV != 'production') {
     require('dotenv').config();
 }
 const express = require("express");
@@ -12,23 +12,26 @@ const flash = require("connect-flash");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const User = require("./models/user.js");
+const Admin = require("./models/admin.js");
 
 const listingsRouter = require("./routes/listing.js");
 const reviewsRouter = require("./routes/review.js");
 const userRouter = require("./routes/user.js");
+const adminRouter = require("./routes/admin.js");
+const homeRouter = require("./routes/home.js");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(methodOverride("_method"));
 
 const sessionOptions = {
-    secret : "Mysupersecret",
-    resave : false,
-    saveUninitialized : true,
+    secret: "Mysupersecret",
+    resave: false,
+    saveUninitialized: true,
     cookie: {
-        expires : Date.now() + 7 * 24 * 60 * 60 * 1000,
-        maxAge : 7 * 24 * 60 * 60 * 1000,
-        httpOnly : true,
+        expires: Date.now() + 7 * 24 * 60 * 60 * 1000,
+        maxAge: 7 * 24 * 60 * 60 * 1000,
+        httpOnly: true,
     }
 }
 
@@ -50,7 +53,7 @@ async function main() {
 }
 
 app.get("/", (req, res) => {
-    res.send("Hi,. I'm root route");;
+    res.send("Hi, I'm root route");
 });
 
 app.get("/messmenu", (req, res) => {
@@ -64,9 +67,11 @@ app.use((req, res, next) => {
     next();
 });
 
+app.use("/", homeRouter);
 app.use("/listings", listingsRouter);
 app.use("/listings/:id/reviews", reviewsRouter);
-app.use("/", userRouter);
+app.use("/users", userRouter);
+app.use("/admins", adminRouter);
 
 app.all("*", (req, res, next) => {
     next(new ExpressError(404, "PAGE NOT FOUND"));
