@@ -12,13 +12,13 @@ const flash = require("connect-flash");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const User = require("./models/user.js");
-const Admin = require("./models/admin.js");
 
 const listingsRouter = require("./routes/listing.js");
 const reviewsRouter = require("./routes/review.js");
 const userRouter = require("./routes/user.js");
 const adminRouter = require("./routes/admin.js");
 const homeRouter = require("./routes/home.js");
+const messmenuRouter = require("./routes/messmenu.js");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
@@ -56,10 +56,6 @@ app.get("/", (req, res) => {
     res.send("Hi, I'm root route");
 });
 
-app.get("/messmenu", (req, res) => {
-    res.send("Hey this is mess menu");
-});
-
 app.use((req, res, next) => {
     res.locals.success = req.flash("success");
     res.locals.error = req.flash("error");
@@ -72,6 +68,7 @@ app.use("/listings", listingsRouter);
 app.use("/listings/:id/reviews", reviewsRouter);
 app.use("/users", userRouter);
 app.use("/admins", adminRouter);
+app.use("/messmenu", messmenuRouter);
 
 app.all("*", (req, res, next) => {
     next(new ExpressError(404, "PAGE NOT FOUND"));
