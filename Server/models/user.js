@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
-const passportLocalMongoose = require('passport-local-mongoose');
+require('mongoose-type-email');
 
 const userSchema = new mongoose.Schema({
     email: {
-        type: String,
+        work: mongoose.SchemaTypes.Email,
         required: true,
     },
     mobile: { 
@@ -34,7 +34,5 @@ const userSchema = new mongoose.Schema({
         ref: "Order",
     }]
 });
-
-userSchema.plugin(passportLocalMongoose);
 
 module.exports = mongoose.model('User', userSchema);
