@@ -3,8 +3,10 @@ require('mongoose-type-email');
 
 const userSchema = new mongoose.Schema({
     email: {
-        work: mongoose.SchemaTypes.Email,
-        required: true,
+        work: {
+            type: mongoose.SchemaTypes.Email,
+            required: true,
+        }
     },
     mobile: { 
         type: String, 
@@ -27,7 +29,7 @@ const userSchema = new mongoose.Schema({
     },
     likedFoods: [{ 
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Retaurant",
+        ref: "Restaurant",
     }],
     cart: [{ 
         type: mongoose.Schema.Types.ObjectId,
