@@ -1,7 +1,10 @@
 const express = require('express');
-const router = express.Router();
+const router = express.Router({mergeParams : true});
 const homeController = require('../controllers/home');
+const messmenuController = require('../controllers/messmenu');
 
-router.get('/hostelAndMessmenu/:regNo', homeController.getHostelAndMessmenu);
+router
+    .route('/student/:regNo')
+    .get(homeController.getUserInfo);
 
 module.exports = router;
