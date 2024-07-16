@@ -7,7 +7,7 @@ const mongoose = require("mongoose");
 const path = require("path");
 const methodOverride = require("method-override");
 
-//const messmenuRouter = require("./routes/messmenu.js");
+const messmenuRouter = require("./routes/messmenu.js");
 const homeRouter = require('./routes/home');
 
 app.use(express.urlencoded({ extended: true }));
@@ -19,15 +19,15 @@ main()
     .catch(err => console.error(err));
 
 async function main() {
-    await mongoose.connect("mongodb+srv://anantagarwal4946:YbBDu24b@anant.8w2muqk.mongodb.net/?retryWrites=true&w=majority&appName=Anant");
+    await mongoose.connect(process.env.MONGO_URL);
 }
 
 app.get("/", (req, res) => {
     res.send("Hi, I'm root route");
 });
 
-//app.use("/messmenu", messmenuRouter);
-app.use("/api", homeRouter);
+app.use("/messmenu", messmenuRouter);
+app.use("/home", homeRouter);
 
 app.listen(process.env.PORT, () => {
     console.log(`Server is running on port ${process.env.PORT}`);
