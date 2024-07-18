@@ -28,29 +28,61 @@ const cleanCommaSpacing = (value) => {
     return [];
 };
 
+const getUniqueItems = (sourceArray, comparisonArray) => {
+    const comparisonSet = new Set(comparisonArray.map(item => item.toLowerCase()));
+    return sourceArray.filter(item => !comparisonSet.has(item.toLowerCase()));
+};
+
 try {
     let workbook = xlsx.readFile("./MH_JULY_MENU.xlsx", { dateNF: "dd/mm/yyyy" });
-    let worksheet = workbook.Sheets["SPL"];
-    let data = xlsx.utils.sheet_to_json(worksheet, { header: 2, raw: false });
-    data = data.map(row => {
+    let worksheetVNVG = workbook.Sheets["NV&VEG"];
+    let worksheetSPL = workbook.Sheets["SPL"];
+    
+    let dataVNVG = xlsx.utils.sheet_to_json(worksheetVNVG, { header: 2, raw: false });
+    let dataSPL = xlsx.utils.sheet_to_json(worksheetSPL, { header: 2, raw: false });
+
+    dataVNVG = dataVNVG.map((row, index) => {
         const daysValue = cleanValue(row["VIT AP UNIVERSITY MEN`S HOSTELS, AMARAVATI"]);
         const parts = daysValue.split(/\s+(?=\d)/);
         const day = parts[0];
-        const dates = parts[1];
+        const dates = formatDate(parts[1]);
 
-        return {
+        const breakfastItems = cleanCommaSpacing(capitalizeWords(cleanValue(row["__EMPTY"])));
+        const lunchItems = cleanCommaSpacing(capitalizeWords(cleanValue(row["__EMPTY_4"])));
+        const snacksItems = cleanCommaSpacing(capitalizeWords(cleanValue(row["__EMPTY_8"])));
+        const dinnerItems = cleanCommaSpacing(capitalizeWords(cleanValue(row["__EMPTY_10"])));
+
+        const splBreakfastItems = cleanCommaSpacing(capitalizeWords(cleanValue(dataSPL[index]?.["__EMPTY"] || "")));
+        const splLunchItems = cleanCommaSpacing(capitalizeWords(cleanValue(dataSPL[index]?.["__EMPTY_4"] || "")));
+        const splSnacksItems = cleanCommaSpacing(capitalizeWords(cleanValue(dataSPL[index]?.["__EMPTY_8"] || "")));
+        const splDinnerItems = cleanCommaSpacing(capitalizeWords(cleanValue(dataSPL[index]?.["__EMPTY_10"] || "")));
+
+        return dates.map(date => ({
             DAY: capitalizeWords(cleanValue(day)),
-            DATE: formatDate(dates),
-            BREAKFAST: cleanCommaSpacing(capitalizeWords(cleanValue(row["__EMPTY"]))),
-            LUNCH: cleanCommaSpacing(capitalizeWords(cleanValue(row["__EMPTY_4"]))),
-            SNACKS: cleanCommaSpacing(capitalizeWords(cleanValue(row["__EMPTY_8"]))),
-            DINNER: cleanCommaSpacing(capitalizeWords(cleanValue(row["__EMPTY_10"])))
-        };
-    });
-    data = data.slice(2);
-    fs.writeFileSync('./messjson.json', JSON.stringify(data, null, 2));
+            DATE: date,
+            BREAKFAST: {
+                NonSpl: breakfastItems,
+                Spl: getUniqueItems(splBreakfastItems, breakfastItems)
+            },
+            LUNCH: {
+                NonSpl: lunchItems,
+                Spl: getUniqueItems(splLunchItems, lunchItems)
+            },
+            SNACKS: {
+                NonSpl: snacksItems,
+                Spl: getUniqueItems(splSnacksItems, snacksItems)
+            },
+            DINNER: {
+                NonSpl: dinnerItems,
+                Spl: getUniqueItems(splDinnerItems, dinnerItems)
+            }
+        }));
+    }).flat();
+    
+    dataVNVG = dataVNVG.slice(2);
+    fs.writeFileSync('./messjson.json', JSON.stringify(dataVNVG, null, 2));
 
-    console.log("Data successfully written to messjsons.json");
+    console.log("Data successfully written to messjson.json");
 } 
 catch (error) {
     console.error("Error processing the Excel file:", error);
