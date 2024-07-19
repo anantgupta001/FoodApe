@@ -2,11 +2,14 @@ const express = require("express");
 const router = express.Router({mergeParams: true});
 const passport = require("passport");
 const userController = require("../controllers/users.js");
+const wrapAsync = require('../utils/wrapAsync');
 
 router
     .route("/signup")
     .get(userController.signupForm)
-    .post(userController.signup)
+    .post(
+        wrapAsync(userController.signup)
+    )
 
 router
     .route("/login")

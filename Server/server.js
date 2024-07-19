@@ -9,8 +9,14 @@ const methodOverride = require("method-override");
 const session = require("express-session");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
+
+// Errors
+const ExpressError = require("./utils/ExpressError.js");
+
+// Models
 const Student = require("./models/user.js");
 
+// Routers
 const messmenuRouter = require("./routes/messmenu.js");
 const homeRouter = require('./routes/home');
 const registerRouter = require("./routes/user.js");
@@ -50,10 +56,19 @@ app.get("/", (req, res) => {
     res.send("Hi, I'm root route");
 });
 
+// Routes
 app.use("/messmenu", messmenuRouter);
 app.use("/home", homeRouter);
 app.use("/register", registerRouter);
 
+app.get("*", (req, res) => {
+    next(new ExpressError(404, "PAGE NOT FOUND"));
+});
+
+app.use((err, req, res, next) => {
+    const { statusCode = 500, message = "SOMETHING WENT WRONG" } = err;
+    res.status(statusCode).render("error", { err });
+});
 
 app.listen(process.env.PORT, () => {
     console.log(`Server is running on port ${process.env.PORT}`);
