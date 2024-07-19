@@ -1,12 +1,11 @@
 const mongoose = require('mongoose');
 require('mongoose-type-email');
+const passportLocalMongoose = require("passport-local-mongoose");
 
 const userSchema = new mongoose.Schema({
     email: {
-        work: {
-            type: mongoose.SchemaTypes.Email,
-            required: true,
-        }
+        type: mongoose.SchemaTypes.Email,
+        required: true,
     },
     mobile: { 
         type: String, 
@@ -17,8 +16,8 @@ const userSchema = new mongoose.Schema({
         required: true, 
         unique: true 
     },
-    hosteler: { 
-        type: Boolean, 
+    isHosteler: { 
+        type: String, 
         required: true 
     },
     hostel: { 
@@ -40,4 +39,6 @@ const userSchema = new mongoose.Schema({
     }]
 });
 
-module.exports = mongoose.model('User', userSchema);
+userSchema.plugin(passportLocalMongoose);
+
+module.exports = mongoose.model('user', userSchema);
