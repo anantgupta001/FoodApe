@@ -1,0 +1,1 @@
+ C:\\Users\\yashj\\Downloads\\FoodApe\\Client\\.dart_tool\\flutter_build\\f5dd2c66821418cbd386e887271497ca\\native_assets.yaml: 
