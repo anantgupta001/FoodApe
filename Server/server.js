@@ -11,6 +11,8 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const User = require("./models/user.js");
 
+
+// Routers
 const messmenuRouter = require("./routes/messmenu.js");
 const homeRouter = require('./routes/home');
 const authRouter = require("./routes/auth.js");
@@ -57,6 +59,14 @@ app.use("/auth", authRouter);
 app.use("/messmenu", messmenuRouter);
 app.use("/home", homeRouter);
 
+app.get("*", (req, res) => {
+    next(new ExpressError(404, "PAGE NOT FOUND"));
+});
+
+app.use((err, req, res, next) => {
+    const { statusCode = 500, message = "SOMETHING WENT WRONG" } = err;
+    res.status(statusCode).render("error", { err });
+});
 
 app.post('/test-body-parser', (req, res) => {
     console.log('Received request body:', req.body);

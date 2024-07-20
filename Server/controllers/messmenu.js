@@ -6,7 +6,7 @@ module.exports.getMessmenuData = async (req, res) => {
     return { status: true, messmenu: messmenu };
 };
 
-// This function will be used for the /messmenu route
+// This function will be used for the '/messmenu' route
 module.exports.showMessmenu = async (req, res) => {
     try {
         const messmenuData = await module.exports.getMessmenuData();

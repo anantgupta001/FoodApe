@@ -30,7 +30,6 @@ const messmenuSchema = new Schema({
     },
     spl: { 
       type: [String], 
-      required: true 
     }
   },
   snacks: {
@@ -40,17 +39,15 @@ const messmenuSchema = new Schema({
     },
     spl: { 
       type: [String], 
-      required: true 
     }
   },
   dinner: {
     NonSpl: { 
       type: [String], 
-      required: true 
+      required: true
     },
     spl: { 
       type: [String], 
-      required: true 
     }
   }
 });
