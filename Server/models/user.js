@@ -4,30 +4,21 @@ const passportLocalMongoose = require("passport-local-mongoose");
 
 const userSchema = new mongoose.Schema({
     email: {
-        type: mongoose.SchemaTypes.Email,
+        type: mongoose.Schema.Types.Email,
         required: true,
     },
-    mobile: { 
-        type: String, 
-        required: true 
-    },
-    regNo: { 
-        type: String, 
-        required: true, 
-        unique: true 
-    },
     isHosteler: { 
-        type: String, 
-        required: true 
+        type: Boolean, 
+        required: true,
     },
     hostel: { 
-        type: String 
+        type: String, 
     },
     roomNo: {
         type: String,
     },
     messType: { 
-        type: String 
+        type: String, 
     },
     likedFoods: [{ 
         type: mongoose.Schema.Types.ObjectId,

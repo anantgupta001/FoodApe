@@ -9,13 +9,15 @@ const methodOverride = require("method-override");
 const session = require("express-session");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
-const Student = require("./models/user.js");
+const User = require("./models/user.js");
 
 const messmenuRouter = require("./routes/messmenu.js");
 const homeRouter = require('./routes/home');
-const registerRouter = require("./routes/user.js");
+const authRouter = require("./routes/auth.js");
 
+// Middleware for parsing request bodies
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 app.use(methodOverride("_method"));
 
@@ -34,9 +36,9 @@ app.use(session(sessionOptions));
 app.use(passport.initialize());
 app.use(passport.session());
 
-passport.use(new LocalStrategy(Student.authenticate()));
-passport.serializeUser(Student.serializeUser());
-passport.deserializeUser(Student.deserializeUser());
+passport.use(new LocalStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 
 main()
     .then(() => console.log("connected to DB"))
@@ -46,14 +48,20 @@ async function main() {
     await mongoose.connect(process.env.MONGO_URL);
 }
 
+// Routes
 app.get("/", (req, res) => {
     res.send("Hi, I'm root route");
 });
 
+app.use("/auth", authRouter);
 app.use("/messmenu", messmenuRouter);
 app.use("/home", homeRouter);
-app.use("/register", registerRouter);
 
+
+app.post('/test-body-parser', (req, res) => {
+    console.log('Received request body:', req.body);
+    res.status(200).send(req.body);
+});
 
 app.listen(process.env.PORT, () => {
     console.log(`Server is running on port ${process.env.PORT}`);
