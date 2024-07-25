@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_ape/constants/theme.dart';
 // import 'package:provider/provider.dart';
 import 'screens/home.dart';
 
@@ -14,9 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: appTheme,
       home: DefaultTabController(
         length: 4,
         child: MyHomePage(),

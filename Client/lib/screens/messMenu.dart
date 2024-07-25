@@ -19,7 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Future<Map<String, dynamic>?> fetchData() async {
     try {
       final response =
-          await http.get(Uri.parse('http://192.168.29.117:3000/messmenu'));
+          await http.get(Uri.parse('http://192.168.137.1:3000/messmenu'));
       if (response.statusCode == 200) {
         return json.decode(response.body);
       } else {
@@ -49,7 +49,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor:
-          Color(0xFF1E1E1E), // Background color similar to the image
+          ThemeData().canvasColor, // Background color similar to the image
       body: Center(
         child: FutureBuilder<Map<String, dynamic>?>(
           future: data,
