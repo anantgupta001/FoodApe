@@ -3,8 +3,10 @@ const messmenuData = require("./messmenu");
 const userData = require("./user");
 const Messmenu = require("../models/messmenu");
 const User = require("../models/user");
-
-const MONGO_URL = "mongodb+srv://anantagarwal4946:YbBDu24b@anant.8w2muqk.mongodb.net/FoodApe?retryWrites=true&w=majority&appName=Anant";
+if (process.env.NODE_ENV != 'production') {
+    require('dotenv').config();
+}
+const MONGO_URL = process.env.MONGO_URL;
 
 mongoose.connect(MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(async () => {
