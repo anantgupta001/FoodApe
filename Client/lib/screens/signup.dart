@@ -9,7 +9,21 @@ class _SignUpPageState extends State<SignUpPage> with SingleTickerProviderStateM
   bool obscurePassword = true;
   String? dropdownValue;
   bool isHosteler = false;
-
+  // bool _validateEmail(String email) {
+  //   String pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$';
+  //   RegExp regex = RegExp(pattern);
+  //   if (!regex.hasMatch(email)) {
+  //     setState(() {
+  //       emailError = 'Enter a valid email address';
+  //     });
+  //     return false;
+  //   } else {
+  //     setState(() {
+  //       emailError = null;
+  //     });
+  //     return true;
+  //   }
+  // }
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -1,7 +1,10 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:food_ape/constants/theme.dart';
+import 'package:food_ape/screens/messMenu.dart';
 import 'package:food_ape/screens/signup.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:http/http.dart' as http;
 
 class LoginPage extends StatefulWidget {
   @override
@@ -12,23 +15,37 @@ class _LoginPageState extends State<LoginPage> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   bool rememberMe = false;
   bool obscurePassword = true;
-  TextEditingController emailController = TextEditingController();
+  TextEditingController usernameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   String? emailError;
 
-  bool _validateEmail(String email) {
-    String pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$';
-    RegExp regex = RegExp(pattern);
-    if (!regex.hasMatch(email)) {
-      setState(() {
-        emailError = 'Enter a valid email address';
-      });
+  Future<bool> _login(String username, String password) async {
+    try {
+      var url = Uri.parse(
+          'http://192.168.137.1:3000/auth/login'); // Use appropriate URL for emulator
+      var client = http.Client();
+      Map<String, String> data = {
+        'username': username,
+        'password': password,
+      };
+      var response = await client.post(
+        url,
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: data, // Encode the data as URL-encoded
+      );
+
+      if (response.statusCode == 200) {
+        print('Login successful');
+        return true;
+      } else {
+        print('Login failed ${response.statusCode}');
+        return false;
+      }
+    } catch (e) {
+      print('Exception caught: $e');
       return false;
-    } else {
-      setState(() {
-        emailError = null;
-      });
-      return true;
     }
   }
 
@@ -84,14 +101,11 @@ class _LoginPageState extends State<LoginPage> {
                             color: Colors.white,
                           ),
                           child: TextFormField(
-                            controller: emailController,
+                            controller: usernameController,
                             decoration: InputDecoration(
-                              focusColor: kPrimaryColor,
-                              fillColor: kCanvasColor,
-                              labelText: 'EMAIL',
+                              labelText: 'USERNAME',
                               labelStyle: kBodyMedium.bodyMedium,
-                              hintText: 'dumbfuck@gmail.com',
-                              hintFadeDuration: Durations.long3,
+                              hintText: '00XXX1234',
                               hintStyle: kFadeBodyMedium.bodyMedium,
                               border: InputBorder.none,
                               contentPadding: EdgeInsets.symmetric(
@@ -100,10 +114,7 @@ class _LoginPageState extends State<LoginPage> {
                             ),
                             validator: (value) {
                               if (value == null || value.isEmpty) {
-                                return 'Email is required';
-                              }
-                              if (!_validateEmail(value)) {
-                                return 'Enter a valid email address';
+                                return 'Username is required';
                               }
                               return null;
                             },
@@ -120,6 +131,7 @@ class _LoginPageState extends State<LoginPage> {
                             obscureText: obscurePassword,
                             decoration: InputDecoration(
                               labelText: 'PASSWORD',
+                              labelStyle: kBodyMedium.bodyMedium,
                               suffixIcon: IconButton(
                                 icon: Icon(obscurePassword
                                     ? Icons.visibility_off
@@ -133,12 +145,6 @@ class _LoginPageState extends State<LoginPage> {
                               border: InputBorder.none,
                               contentPadding: EdgeInsets.symmetric(
                                   horizontal: 16, vertical: 12),
-                              // focusedBorder: UnderlineInputBorder(
-                              //   borderSide: BorderSide(color: kPrimaryColor),
-                              // ),
-                              // enabledBorder: UnderlineInputBorder(
-                              //   borderSide: BorderSide(color: kPrimaryColor),
-                              // ),
                             ),
                           ),
                         ),
@@ -159,7 +165,6 @@ class _LoginPageState extends State<LoginPage> {
                                   value: rememberMe,
                                   onChanged: (newValue) {
                                     setState(() {
-                                      // TODO: Implement remember me functionality
                                       rememberMe = newValue!;
                                     });
                                   },
@@ -183,10 +188,14 @@ class _LoginPageState extends State<LoginPage> {
                         SizedBox(
                           width: double.infinity,
                           child: ElevatedButton(
-                            onPressed: () {
-                              if (_formKey.currentState!.validate()) {
-                                print('Email: ${emailController.text}');
-                                print('Password: ${passwordController.text}');
+                            onPressed: () async {
+                              if (await _login(usernameController.text,
+                                  passwordController.text)) {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => MessMenuPage()),
+                                );
                               }
                             },
                             style: ElevatedButton.styleFrom(
@@ -245,3 +254,5 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 }
+
+// Placeholder for the MessMenuPage
