@@ -9,6 +9,7 @@ const kTextColor = Color(0xFF000000); // Black for contrast
 const kRustyRed = Color(0xFFD52941); // Rusty red
 const kCosmicLatte = Color(0xFFFFF8E8); // Cosmic latte
 const kSecondaryColor = Color(0xFFFCD581);
+const k2ScaffoldBackgroundColor = Color.fromARGB(255, 255, 241, 210);
 final kColorScheme =
     ColorScheme.fromSwatch().copyWith(secondary: kSecondaryColor);
 // Define the app theme FONTS
