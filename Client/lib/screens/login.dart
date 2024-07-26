@@ -105,7 +105,7 @@ class _LoginPageState extends State<LoginPage> {
                             decoration: InputDecoration(
                               labelText: 'USERNAME',
                               labelStyle: kBodyMedium.bodyMedium,
-                              hintText: '00XXX1234',
+                              hintText: '22XXX1234',
                               hintStyle: kFadeBodyMedium.bodyMedium,
                               border: InputBorder.none,
                               contentPadding: EdgeInsets.symmetric(
