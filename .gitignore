@@ -1,4 +1,4 @@
 .env
 node_modules/
 Client/build/
-Client/.dart_tool
+Client/.dart_tool/
