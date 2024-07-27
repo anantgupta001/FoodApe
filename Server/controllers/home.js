@@ -8,7 +8,7 @@ module.exports.getUserInfo = async (req, res) => {
         if (!user) {
             return res.status(404).send({ message: 'User not found' });
         }
-        if(user.isHosteler === "Hosteler"){
+        if(user.isHosteler){
             const messmenuData = await messmenuController.getMessmenuData();
             res.status(200).send({hostel: user.hostel, roomNO: user.roomNo, messType: user.messType, messmenu: messmenuData.messmenu });
         }else{
