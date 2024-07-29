@@ -8,6 +8,9 @@ const FoodSchema = new Schema({
   price: { type: Number, required: true },
   numberOfRatings: { type: Number, default: 0 },
   available: { type: Boolean, default: true },
+  restaurantName: { type: String, required: true },
+  blockName: { type: String, required: true, enum: ["AB-1", "AB-2", "CB", "Food Street", "Rock Plaza", "Maggi Point"] }
 });
 
-module.exports = FoodSchema;
+const Food = mongoose.model('Food', FoodSchema);
+module.exports = Food;
