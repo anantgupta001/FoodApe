@@ -9,12 +9,14 @@ const restaurantSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  rating: [
-        {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: "Review",
+  rating: {
+        currentAvgRating: {
+          type: Number,
         },
-    ],
+        numberOfRatings: {
+          type: Number,
+        }
+  },
   totalOrders: {
     type: Number,
     required: true,
@@ -40,12 +42,14 @@ const restaurantSchema = new mongoose.Schema({
                 type: String,
                 required: true
             },
-            rating: [
-                {
-                    type: mongoose.Schema.Types.ObjectId,
-                    ref: "Review",
-                },
-            ],
+            rating: {
+              currentAvgRating: {
+                type: Number,
+              },
+              numberOfRatings: {
+                type: Number,
+              }
+            },
             price: {
                 type: Number,
                 required: true,

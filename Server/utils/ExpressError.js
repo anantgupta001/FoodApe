@@ -1,7 +1,8 @@
+// Handles Sync Errors
 class ExpressError extends Error {
-    constructor(statusCode, message){
+    constructor(status, message) {
         super();
-        this.statusCode = statusCode;
+        this.status = status;
         this.message = message;
     }
 }

@@ -6,37 +6,35 @@ const app = express();
 const mongoose = require("mongoose");
 const path = require("path");
 const methodOverride = require("method-override");
-const ExpressError = require("./utils/ExpressError");
 const session = require("express-session");
-const flash = require("connect-flash");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const User = require("./models/user.js");
 
-const listingsRouter = require("./routes/listing.js");
-const reviewsRouter = require("./routes/review.js");
-const userRouter = require("./routes/user.js");
-const adminRouter = require("./routes/admin.js");
-const homeRouter = require("./routes/home.js");
-const messmenuRouter = require("./routes/messmenu.js");
 
+// Routers
+const messmenuRouter = require("./routes/messmenu.js");
+const homeRouter = require('./routes/home');
+const authRouter = require("./routes/auth.js");
+
+// Middleware for parsing request bodies
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 app.use(methodOverride("_method"));
 
 const sessionOptions = {
-    secret: "Mysupersecret",
-    resave: false,
-    saveUninitialized: true,
+    secret : "Mysupersecret",
+    resave : false,
+    saveUninitialized : true,
     cookie: {
-        expires: Date.now() + 7 * 24 * 60 * 60 * 1000,
-        maxAge: 7 * 24 * 60 * 60 * 1000,
-        httpOnly: true,
+        expires : Date.now() + 7 * 24 * 60 * 60 * 1000,
+        maxAge : 7 * 24 * 60 * 60 * 1000,
+        httpOnly : true,
     }
 }
 
 app.use(session(sessionOptions));
-app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -52,25 +50,16 @@ async function main() {
     await mongoose.connect(process.env.MONGO_URL);
 }
 
+// Routes
 app.get("/", (req, res) => {
     res.send("Hi, I'm root route");
 });
 
-app.use((req, res, next) => {
-    res.locals.success = req.flash("success");
-    res.locals.error = req.flash("error");
-    res.locals.currUser = req.user;
-    next();
-});
-
-app.use("/", homeRouter);
-app.use("/listings", listingsRouter);
-app.use("/listings/:id/reviews", reviewsRouter);
-app.use("/users", userRouter);
-app.use("/admins", adminRouter);
+app.use("/auth", authRouter);
 app.use("/messmenu", messmenuRouter);
+app.use("/home", homeRouter);
 
-app.all("*", (req, res, next) => {
+app.get("*", (req, res) => {
     next(new ExpressError(404, "PAGE NOT FOUND"));
 });
 
@@ -79,6 +68,12 @@ app.use((err, req, res, next) => {
     res.status(statusCode).render("error", { err });
 });
 
-app.listen(process.env.PORT, () => {
-    console.log("Server is listening...");
+app.post('/test-body-parser', (req, res) => {
+    console.log('Received request body:', req.body);
+    res.status(200).send(req.body);
 });
+
+app.listen(process.env.PORT, () => {
+    console.log(`Server is running on port ${process.env.PORT}`);
+});
+

@@ -1,12 +1,21 @@
-const Restaurant = require("../models/home");
+const User = require('../models/user'); 
+const messmenuController = require('../controllers/messmenu'); 
 
-module.exports.showHomePage = async (req, res) => {
-    const restaurants = await Restaurant.find({});
-    res.render("listings/index.ejs", { restaurants });
-};
-
-module.exports.searchFood = async (req, res) => {
-    const { query } = req.query;
-    const searchResults = await Restaurant.find({ "menu.food": { $regex: query, $options: "i" } });
-    res.render("listings/index.ejs", { restaurants: searchResults });
+module.exports.getUserInfo = async (req, res) => {
+    try {
+        const regNo = req.params.regNo;
+        const user = await User.findOne({ regNo: regNo });
+        if (!user) {
+            return res.status(404).send({ message: 'User not found' });
+        }
+        if(user.isHosteler){
+            const messmenuData = await messmenuController.getMessmenuData();
+            res.status(200).send({hostel: user.hostel, roomNO: user.roomNo, messType: user.messType, messmenu: messmenuData.messmenu });
+        }else{
+            res.status(200).send("YE TO HOSTELER NHI H");
+        }
+        
+    } catch (err) {
+        res.status(500).send({ message: err.message });
+    }
 };
