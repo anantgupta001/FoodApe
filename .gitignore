@@ -1,4 +1,6 @@
 .env
+.vscode/
 node_modules/
 Client/build/
 Client/.dart_tool/
+Client/.vscode/
