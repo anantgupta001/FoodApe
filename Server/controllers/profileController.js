@@ -22,15 +22,12 @@ module.exports.editProfile = async (req, res) => {
             user.email = email !== undefined ? email : user.email;
             user.isHosteler = isHosteler !== undefined ? isHosteler : user.isHosteler;
             
-            if (user.isHosteler === false) {
-                user.hostel = undefined;
-                user.roomNo = undefined;
-                user.messType = undefined;
-            } else if (user.isHosteler === true) {
-                user.hostel = hostel !== undefined ? hostel : user.hostel;
-                user.roomNo = roomNo !== undefined ? roomNo : user.roomNo;
-                user.messType = messType !== undefined ? messType : user.messType;
-            }
+            user.isHosteler === false 
+            ? (user.hostel = undefined, user.roomNo = undefined, user.messType = undefined)
+            : (user.hostel = hostel !== undefined ? hostel : user.hostel,
+            user.roomNo = roomNo !== undefined ? roomNo : user.roomNo,
+            user.messType = messType !== undefined ? messType : user.messType);
+
 
             if (likedFoods !== undefined) {
                 const likedFoodsArray = likedFoods.split(',').map(id => mongoose.Types.ObjectId(id.trim()));
