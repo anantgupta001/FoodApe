@@ -7,7 +7,7 @@ const FoodSchema = new Schema({
   rating: { type: Number, default: 0, min: 0, max: 5 },
   price: { type: Number, required: true },
   numberOfRatings: { type: Number, default: 0 },
-  available: { type: Boolean, default: true },
+  available: { type: Boolean, default: false },
   restaurantName: { type: String, required: true },
   blockName: { type: String, required: true, enum: ["AB-1", "AB-2", "CB", "Food Street", "Rock Plaza", "Maggi Point"] }
 });
