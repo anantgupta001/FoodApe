@@ -1,0 +1,11 @@
+{
+  "name": "foodape",
+  "version": "1.0.0",
+  "description": "Food app for VIT-AP university",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ayush",
+  "license": "ISC"
+}

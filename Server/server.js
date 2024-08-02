@@ -17,6 +17,7 @@ const messmenuRouter = require("./routes/messmenu.js");
 const homeRouter = require('./routes/home');
 const authRouter = require("./routes/auth.js");
 const profileControllerRouter = require("./routes/profileController.js");
+const blockRouter = require("./routes/block.js");
 
 // Middleware for parsing request bodies
 app.use(express.urlencoded({ extended: true }));
@@ -60,6 +61,7 @@ app.use("/auth", authRouter);
 app.use("/messmenu", messmenuRouter);
 app.use("/home", homeRouter);
 app.use("/user", profileControllerRouter);
+app.use("/home", blockRouter);
 
 app.get("*", (req, res) => {
     next(new ExpressError(404, "PAGE NOT FOUND"));
@@ -67,7 +69,7 @@ app.get("*", (req, res) => {
 
 app.use((err, req, res, next) => {
     const { statusCode = 500, message = "SOMETHING WENT WRONG" } = err;
-    res.status(statusCode).render("error", { err });
+    res.status(statusCode).send(message);
 });
 
 app.post('/test-body-parser', (req, res) => {
