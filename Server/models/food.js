@@ -6,6 +6,8 @@ const FoodSchema = new Schema({
   description: { type: String, required: true },
   rating: { type: Number, default: 0, min: 0, max: 5 },
   price: { type: Number, required: true },
+  restaurant: { type: String, required: true },
+  block: { type: String, required: true },
   numberOfRatings: { type: Number, default: 0 },
   available: { type: Boolean, default: false },
 });
