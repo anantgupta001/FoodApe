@@ -1,21 +1,21 @@
 const sampleMessMenu = [
-    { date: "1", day: "Monday", breakfast: { NonSpl: ["Aloo paratha"], spl: ["jalebi"] }, lunch: { NonSpl: ["Idli"], spl: ["laccha paratha"] }, snacks: { NonSpl: ["Pizza"], spl: ["rasgulla"] }, dinner: { NonSpl: ["Chicken"], spl: ["hot and sour soup"] } },
+    { date: "01", day: "Monday", breakfast: { NonSpl: ["Aloo paratha"], spl: ["jalebi"] }, lunch: { NonSpl: ["Idli"], spl: ["laccha paratha"] }, snacks: { NonSpl: ["Pizza"], spl: ["rasgulla"] }, dinner: { NonSpl: ["Chicken"], spl: ["hot and sour soup"] } },
 
-    { date: "2", day: "Tuesday", breakfast: { NonSpl: ["Poha"], spl: ["jalebi"] }, lunch: { NonSpl: ["Rice and Dal"], spl: ["laccha paratha"] }, snacks: { NonSpl: ["Samosa"], spl: ["rasgulla"] }, dinner: { NonSpl: ["Paneer Butter Masala"], spl: ["tomato soup"] } },
+    { date: "02", day: "Tuesday", breakfast: { NonSpl: ["Poha"], spl: ["jalebi"] }, lunch: { NonSpl: ["Rice and Dal"], spl: ["laccha paratha"] }, snacks: { NonSpl: ["Samosa"], spl: ["rasgulla"] }, dinner: { NonSpl: ["Paneer Butter Masala"], spl: ["tomato soup"] } },
 
-    { date: "3", day: "Wednesday", breakfast: { NonSpl: ["Upma"], spl: ["jalebi"] }, lunch: { NonSpl: ["Chole Bhature"], spl: ["laccha paratha"] }, snacks: { NonSpl: ["Sandwich"], spl: ["rasgulla"] }, dinner: { NonSpl: ["Fish Curry"], spl: ["hot and sour soup"] } },
+    { date: "03", day: "Wednesday", breakfast: { NonSpl: ["Upma"], spl: ["jalebi"] }, lunch: { NonSpl: ["Chole Bhature"], spl: ["laccha paratha"] }, snacks: { NonSpl: ["Sandwich"], spl: ["rasgulla"] }, dinner: { NonSpl: ["Fish Curry"], spl: ["hot and sour soup"] } },
 
-    { date: "4", day: "Thursday", breakfast: { NonSpl: ["Dosa"], spl: ["jalebi"] }, lunch: { NonSpl: ["Pulao"], spl: ["laccha paratha"] }, snacks: { NonSpl: ["Fruit Salad"], spl: ["rasgulla"] }, dinner: { NonSpl: ["Mutton Curry"], spl: ["tomato soup"] } },
+    { date: "04", day: "Thursday", breakfast: { NonSpl: ["Dosa"], spl: ["jalebi"] }, lunch: { NonSpl: ["Pulao"], spl: ["laccha paratha"] }, snacks: { NonSpl: ["Fruit Salad"], spl: ["rasgulla"] }, dinner: { NonSpl: ["Mutton Curry"], spl: ["tomato soup"] } },
 
-    { date: "5", day: "Friday", breakfast: { NonSpl: ["Paratha"], spl: ["jalebi"] }, lunch: { NonSpl: ["Rajma Chawal"], spl: ["laccha paratha"] }, snacks: { NonSpl: ["Pasta"], spl: ["rasgulla"] }, dinner: { NonSpl: ["Vegetable Biryani"], spl: ["hot and sour soup"] } },
+    { date: "05", day: "Friday", breakfast: { NonSpl: ["Paratha"], spl: ["jalebi"] }, lunch: { NonSpl: ["Rajma Chawal"], spl: ["laccha paratha"] }, snacks: { NonSpl: ["Pasta"], spl: ["rasgulla"] }, dinner: { NonSpl: ["Vegetable Biryani"], spl: ["hot and sour soup"] } },
     
-    { date: "6", day: "Saturday", breakfast: { NonSpl: ["Idli"], spl: ["jalebi"] }, lunch: { NonSpl: ["Biryani"], spl: ["laccha paratha"] }, snacks: { NonSpl: ["French Fries"], spl: ["rasgulla"] }, dinner: { NonSpl: ["Grilled Chicken"], spl: ["tomato soup"] } },
+    { date: "06", day: "Saturday", breakfast: { NonSpl: ["Idli"], spl: ["jalebi"] }, lunch: { NonSpl: ["Biryani"], spl: ["laccha paratha"] }, snacks: { NonSpl: ["French Fries"], spl: ["rasgulla"] }, dinner: { NonSpl: ["Grilled Chicken"], spl: ["tomato soup"] } },
 
-    { date: "7", day: "Sunday", breakfast: { NonSpl: ["Pancakes"], spl: ["jalebi"] }, lunch: { NonSpl: ["Chicken Curry"], spl: ["laccha paratha"] }, snacks: { NonSpl: ["Cookies"], spl: ["rasgulla"] }, dinner: { NonSpl: ["Vegetable Stir Fry"], spl: ["hot and sour soup"] } },
+    { date: "07", day: "Sunday", breakfast: { NonSpl: ["Pancakes"], spl: ["jalebi"] }, lunch: { NonSpl: ["Chicken Curry"], spl: ["laccha paratha"] }, snacks: { NonSpl: ["Cookies"], spl: ["rasgulla"] }, dinner: { NonSpl: ["Vegetable Stir Fry"], spl: ["hot and sour soup"] } },
 
-    { date: "8", day: "Monday", breakfast: { NonSpl: ["Toast"], spl: ["jalebi"] }, lunch: { NonSpl: ["Fried Rice"], spl: ["laccha paratha"] }, snacks: { NonSpl: ["Nachos"], spl: ["rasgulla"] }, dinner: { NonSpl: ["Beef Stew"], spl: ["tomato soup"] } },
+    { date: "08", day: "Monday", breakfast: { NonSpl: ["Toast"], spl: ["jalebi"] }, lunch: { NonSpl: ["Fried Rice"], spl: ["laccha paratha"] }, snacks: { NonSpl: ["Nachos"], spl: ["rasgulla"] }, dinner: { NonSpl: ["Beef Stew"], spl: ["tomato soup"] } },
 
-    { date: "9", day: "Tuesday", breakfast: { NonSpl: ["Omelette"], spl: ["jalebi"] }, lunch: { NonSpl: ["Dal Tadka"], spl: ["laccha paratha"] }, snacks: { NonSpl: ["Bhel Puri"], spl: ["rasgulla"] }, dinner: { NonSpl: ["Pasta"], spl: ["hot and sour soup"] } },
+    { date: "09", day: "Tuesday", breakfast: { NonSpl: ["Omelette"], spl: ["jalebi"] }, lunch: { NonSpl: ["Dal Tadka"], spl: ["laccha paratha"] }, snacks: { NonSpl: ["Bhel Puri"], spl: ["rasgulla"] }, dinner: { NonSpl: ["Pasta"], spl: ["hot and sour soup"] } },
 
     { date: "10", day: "Wednesday", breakfast: { NonSpl: ["Smoothie"], spl: ["jalebi"] }, lunch: { NonSpl: ["Paneer Tikka"], spl: [] }, snacks: { NonSpl: ["Pakora"], spl: ["rasgulla"] }, dinner: { NonSpl: ["Sushi"], spl: ["hot and sour soup"] } },
 

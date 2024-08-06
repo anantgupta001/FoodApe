@@ -3,7 +3,7 @@ const router = express.Router({mergeParams : true});
 const homeController = require('../controllers/home');
 
 router
-    .route('/user/:regNo')
+    .route('/user/:username')
     .get(homeController.getUserInfo);
 
 module.exports = router;

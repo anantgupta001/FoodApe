@@ -4,13 +4,16 @@ module.exports.signup = async (req, res) => {
     try {
         let { 
             username,
+            name,
+            mobile,
             email, 
             isHosteler, 
             hostel, 
-            roomNo, 
             messType, 
             password,  
         } = req.body;
+
+        // res.status(200).send(isHosteler);
 
         // Check if the email or username already exists
         const existingUser = await User.findOne({ $or: [{ email: email }, { username: username }] });
@@ -18,9 +21,20 @@ module.exports.signup = async (req, res) => {
             return res.status(400).send({ message: 'A User with this email, registration number already exists.' });
         }
 
+        if (isHosteler == "false") {
+            hostel = undefined;
+            messType = undefined;
+        }
+
         // Create a new User
         const newUser = new User({
-            username, email, isHosteler, hostel, roomNo, messType
+            username,
+            name,
+            mobile,
+            email, 
+            isHosteler, 
+            hostel, 
+            messType, 
         });
         
         const registeredUser = await User.register(newUser, password);
@@ -44,11 +58,6 @@ module.exports.signup = async (req, res) => {
 }
 
 module.exports.login = (req, res) => {
-    if (req.isAuthenticated()) {
-        // User is already logged in
-        console.log(`User ${req.user.username} is already logged in`);
-        return res.status(200).send({ status: true, message: `User ${req.user.username} is already logged in` });
-    }
     console.log(`User ${req.user.username} logged in successfully`);
     res.status(200).send({ status: true, message: `User ${req.user.username} logged in successfully` });
 }
