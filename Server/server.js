@@ -59,18 +59,9 @@ app.use("/auth", authRouter);
 app.use("/messmenu", messmenuRouter);
 app.use("/home", homeRouter);
 
-app.get("*", (req, res) => {
-    next(new ExpressError(404, "PAGE NOT FOUND"));
-});
-
 app.use((err, req, res, next) => {
     const { statusCode = 500, message = "SOMETHING WENT WRONG" } = err;
-    res.status(statusCode).render("error", { err });
-});
-
-app.post('/test-body-parser', (req, res) => {
-    console.log('Received request body:', req.body);
-    res.status(200).send(req.body);
+    res.status(statusCode).send(message);
 });
 
 app.listen(process.env.PORT, () => {
