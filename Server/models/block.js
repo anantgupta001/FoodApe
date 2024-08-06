@@ -4,7 +4,8 @@ const Restaurant = require('./restaurant');
 
 const BlockSchema = new Schema({
   name: { type: String, required: true },
-  restaurants: { type: [String], default: [] }  
+  restaurants: { type: [Restaurant.Schema], default: [] },
+  image: { type: String }
 });
 
 const Block = mongoose.model('Block', BlockSchema);
