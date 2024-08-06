@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const passport = require("passport");
-const profileController = require('../controllers/profileController');
+const profileController = require('../controllers/profile');
 
 function ensureAuthenticated(req, res, next) {
     if (req.isAuthenticated()) {
@@ -11,14 +11,18 @@ function ensureAuthenticated(req, res, next) {
 }
 // Middleware to check if the user is logged in
 router.put(
-    '/profile/yourProfile/editProfile',
+    '/perosnalInfo/editProfile',
     ensureAuthenticated,
     profileController.editProfile
 );
 router.delete(
-    '/profile/yourProfile/deleteProfile', 
+    '/perosnalInfo/deleteProfile', 
     ensureAuthenticated,
     profileController.deleteProfile
+);
+router.put(
+    '/perosnalInfo/likedFoods',
+    profileController.likedFoods
 );
 
 module.exports = router;
