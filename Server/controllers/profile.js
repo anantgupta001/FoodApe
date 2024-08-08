@@ -1,43 +1,7 @@
 const mongoose = require('mongoose');
-const fs = require('fs');
-const path = require('path');
 const User = require('../models/user');
+const { getValidHostels, getValidMessTypes } = require('../init/dataLoader');
 
-// Load and parse hostel.json
-const hostelDataPath = path.join(__dirname, '../src/hostel.json');
-let validHostels = [];
-
-fs.readFile(hostelDataPath, 'utf8', (err, data) => {
-    if (err) {
-        console.error('Error reading hostel.json file:', err);
-        throw err; // Rethrow to stop application if config is critical
-    }
-    try {
-        const parsedData = JSON.parse(data);
-        validHostels = parsedData.map(item => item.name);
-    } catch (parseErr) {
-        console.error('Error parsing hostel.json file:', parseErr);
-        throw parseErr; // Rethrow to stop application if config is critical
-    }
-});
-
-// Load and parse messType.json
-const messTypeDataPath = path.join(__dirname, '../src/messType.json');
-let validMessTypes = [];
-
-fs.readFile(messTypeDataPath, 'utf8', (err, data) => {
-    if (err) {
-        console.error('Error reading messType.json file:', err);
-        throw err; // Rethrow to stop application if config is critical
-    }
-    try {
-        const parsedData = JSON.parse(data);
-        validMessTypes = parsedData.map(item => item.mess);
-    } catch (parseErr) {
-        console.error('Error parsing messType.json file:', parseErr);
-        throw parseErr; // Rethrow to stop application if config is critical
-    }
-});
 
 // PUT request to update the profile
 module.exports.editProfile = async (req, res) => {
@@ -67,7 +31,8 @@ module.exports.editProfile = async (req, res) => {
                 user.hostel = undefined;
                 user.messType = undefined;
             } else {
-
+                const validHostels = await getValidHostels();
+                const validMessTypes = await getValidMessTypes();
                 // Handle hostel field separately
                 if (user.hostel === undefined) {
                     return res.status(400).send('Hostel must be provided if isHosteler is true');
@@ -76,7 +41,6 @@ module.exports.editProfile = async (req, res) => {
                     return res.status(400).send('Invalid hostel value');
                 }
                 user.hostel = hostel;
-                
                 // Handle messType field separately
                 if (user.messType !== undefined) {
                     if (!validMessTypes.includes(messType)) {

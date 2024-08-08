@@ -17,6 +17,7 @@ const messmenuRouter = require("./routes/messmenu.js");
 const homeRouter = require('./routes/home');
 const authRouter = require("./routes/auth.js");
 const editProfileRouter = require("./routes/profile.js");
+const blockRouter = require("./routes/block");
 
 // Middleware for parsing request bodies
 app.use(express.urlencoded({ extended: true }));
@@ -60,6 +61,7 @@ app.use("/auth", authRouter);
 app.use("/messmenu", messmenuRouter);
 app.use("/home", homeRouter);
 app.use("/profile", editProfileRouter);
+app.use("/block", blockRouter);
 
 app.use((err, req, res, next) => {
     const { statusCode = 500, message = "SOMETHING WENT WRONG" } = err;
