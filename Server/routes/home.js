@@ -4,6 +4,6 @@ const homeController = require('../controllers/home');
 
 router
     .route('/user/:username')
-    .get(homeController.getUserInfo);
+    .get(homeController.getHomeData);
 
 module.exports = router;

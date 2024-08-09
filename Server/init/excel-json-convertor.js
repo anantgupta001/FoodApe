@@ -18,7 +18,16 @@ const capitalizeWords = (value) => {
 };
 
 const formatDate = (dates) => {
-    return dates ? cleanValue(dates).split(',').map(date => date.trim()) : [];
+    if (!dates) return [];
+    
+    // Clean and split the date string
+    const cleanedDates = cleanValue(dates).split(',').map(date => date.trim());
+
+    // Format each date to ensure leading zeroes for single-digit dates
+    return cleanedDates.map(date => {
+        const parts = date.split('/');
+        return parts.map(part => part.padStart(2, '0')).join('/');
+    });
 };
 
 const cleanCommaSpacing = (value) => {
@@ -34,9 +43,9 @@ const getUniqueItems = (sourceArray, comparisonArray) => {
 };
 
 try {
-    let workbook = xlsx.readFile("./MH_JULY_MENU.xlsx", { dateNF: "dd/mm/yyyy" });
-    let worksheetVNVG = workbook.Sheets["NV&VEG"];
-    let worksheetSPL = workbook.Sheets["SPL"];
+    let workbook = xlsx.readFile("./August_Menu.xlsx", { dateNF: "dd/mm/yyyy" });
+    let worksheetVNVG = workbook.Sheets["Veg & Non-Veg"];
+    let worksheetSPL = workbook.Sheets["Special"];
     
     let dataVNVG = xlsx.utils.sheet_to_json(worksheetVNVG, { header: 2, raw: false });
     let dataSPL = xlsx.utils.sheet_to_json(worksheetSPL, { header: 2, raw: false });
@@ -80,9 +89,9 @@ try {
     }).flat();
     
     dataVNVG = dataVNVG.slice(2);
-    fs.writeFileSync('./messjson.json', JSON.stringify(dataVNVG, null, 2));
+    fs.writeFileSync('./messjson_August.json', JSON.stringify(dataVNVG, null, 2));
 
-    console.log("Data successfully written to messjson.json");
+    console.log("Data successfully written to .json");
 } 
 catch (error) {
     console.error("Error processing the Excel file:", error);
