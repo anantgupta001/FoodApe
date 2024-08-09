@@ -16,7 +16,7 @@ module.exports.getBlockData = async (req, res) => {
     }
 }
 
-module.exports.show = (req, res) => {
+module.exports.showBlocks = (req, res) => {
     const blockname = req.params.blockname;
     if (!blockname) {
         return res.status(400).send({ message: 'Block name is required' });

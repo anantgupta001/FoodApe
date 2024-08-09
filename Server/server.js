@@ -16,7 +16,7 @@ const User = require("./models/user.js");
 const messmenuRouter = require("./routes/messmenu.js");
 const homeRouter = require('./routes/home');
 const authRouter = require("./routes/auth.js");
-const editProfileRouter = require("./routes/profile.js");
+const profileRouter = require("./routes/profile.js");
 const blockRouter = require("./routes/block");
 
 // Middleware for parsing request bodies
@@ -60,7 +60,7 @@ app.get("/", (req, res) => {
 app.use("/auth", authRouter);
 app.use("/messmenu", messmenuRouter);
 app.use("/home", homeRouter);
-app.use("/profile", editProfileRouter);
+app.use("/profile", profileRouter);
 app.use("/block", blockRouter);
 
 app.use((err, req, res, next) => {

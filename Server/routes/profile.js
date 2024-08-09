@@ -16,12 +16,12 @@ router.put(
     profileController.editProfile
 );
 router.delete(
-    '/perosnalInfo/deleteProfile', 
+    '/deleteProfile', 
     ensureAuthenticated,
     profileController.deleteProfile
 );
 router.put(
-    '/perosnalInfo/likedFoods',
+    '/likedFoods',
     profileController.likedFoods
 );
 
