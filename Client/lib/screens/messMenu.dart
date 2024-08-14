@@ -4,6 +4,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
+import 'package:url_launcher/url_launcher.dart';
+
 class MessMenuPage extends StatefulWidget {
   @override
   _MessMenuPageState createState() => _MessMenuPageState();
@@ -11,7 +13,7 @@ class MessMenuPage extends StatefulWidget {
 
 class _MessMenuPageState extends State<MessMenuPage> {
   late Future<Map<String, dynamic>?> data;
-
+  final Uri _url = Uri.parse('https://docs.google.com/spreadsheets/d/1ZBca-NZ5V_N0NwJ5t5Y5dpb5XFCZqRQYAXddU77M07U/edit');
   @override
   void initState() {
     super.initState();
@@ -33,6 +35,11 @@ class _MessMenuPageState extends State<MessMenuPage> {
     }
   }
 
+  Future<void> _launchUrl() async {
+  if (!await launchUrl(_url)) {
+    throw Exception('Could not launch $_url');
+  }
+} 
   String getCurrentMeal() {
     final now = DateTime.now();
     if (now.hour >= 1 && now.hour < 9) {
@@ -205,7 +212,11 @@ class _MessMenuPageState extends State<MessMenuPage> {
                               borderRadius: BorderRadius.circular(16),
                             ),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            // this url opens the menu in the browser
+                            _launchUrl();
+
+                          },
                           child: Text(
                             'View Full Menu',
                             style: GoogleFonts.playfairDisplay(
