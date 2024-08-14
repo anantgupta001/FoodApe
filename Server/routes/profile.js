@@ -21,8 +21,8 @@ router.delete(
     profileController.deleteProfile
 );
 router.put(
-    '/editLikedFoods',
-    profileController.likedFoods
+    '/removeLikedFoods',
+    profileController.removeLikedFoods
 );
 
 module.exports = router;

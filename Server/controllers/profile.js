@@ -7,6 +7,10 @@ const { getValidHostels, getValidMessTypes } = require('../init/dataLoader');
 module.exports.editProfile = async (req, res) => {
     const { username, name, mobile, email, isHosteler, hostel, messType, currentPassword, newPassword } = req.body;
 
+    console.log('Request Body:', req.body); // Log the entire request body
+    console.log('Hostel:', hostel); // Log the hostel value
+    console.log('isHosteler:', isHosteler); // Log the isHosteler value
+
     try {
         const user = await User.findOne({ username });
 
@@ -34,7 +38,7 @@ module.exports.editProfile = async (req, res) => {
                 const validHostels = await getValidHostels();
                 const validMessTypes = await getValidMessTypes();
                 // Handle hostel field separately
-                if (user.hostel === undefined) {
+                if (hostel === undefined) {
                     return res.status(400).send('Hostel must be provided if isHosteler is true');
                 }
                 if (!validHostels.includes(hostel)) {
@@ -42,7 +46,7 @@ module.exports.editProfile = async (req, res) => {
                 }
                 user.hostel = hostel;
                 // Handle messType field separately
-                if (user.messType !== undefined) {
+                if (messType !== undefined) {
                     if (!validMessTypes.includes(messType)) {
                         return res.status(400).send('Invalid messType value');
                     }
@@ -68,20 +72,33 @@ module.exports.editProfile = async (req, res) => {
 };
 
 // Update likedFoods
-module.exports.likedFoods = async (user, likedFoods, res) => {
+module.exports.removeLikedFoods = async (req, res) => {
     try {
-        const likedFoodsArray = likedFoods.split(',').map(id => mongoose.Types.ObjectId(id.trim()));
-        user.likedFoods = user.likedFoods.filter(foodId => likedFoodsArray.includes(foodId));
-        likedFoodsArray.forEach(foodId => {
-            if (!user.likedFoods.includes(foodId)) {
-                user.likedFoods.push(foodId);
-            }
-        });
+        const userId = req.user._id;
+        const { likedFoods } = req.body;
+
+        if (!likedFoods) {
+            return res.status(400).send('No food item specified for removal');
+        }
+
+        // Find the user by ID
+        const user = await User.findById(userId);
+
+        if (!user) {
+            return res.status(404).send('User not found');
+        }
+
+        // Remove the specified food from likedFoods array
+        user.likedFoods = user.likedFoods.filter(food => food.toString() !== likedFoods);
+
+        await user.save();
+
+        res.status(200).send('Liked food removed successfully');
     } catch (err) {
-        res.status(400).send('Invalid likedFoods format');
+        console.error(err);
+        res.status(500).send('Error removing liked food');
     }
 };
-
 
 // DELETE request to delete the profile
 module.exports.deleteProfile = async (req, res) => {

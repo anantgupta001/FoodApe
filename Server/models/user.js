@@ -29,7 +29,7 @@ const userSchema = new mongoose.Schema({
     },
     likedFoods: [{ 
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Restaurant",
+        ref: "foods",
     }],
     cart: [{ 
         type: mongoose.Schema.Types.ObjectId,
