@@ -1,0 +1,1919 @@
+[
+  {
+    "DAY": "Monday",
+    "DATE": "26",
+    "BREAKFAST": {
+      "NonSpl": [
+        "Chole Bhature",
+        "Poha",
+        "Egg Podimas",
+        "Brown Bread + Butter + Jam",
+        "Coffee / Milk",
+        "Sprouts"
+      ],
+      "Spl": [
+        "Chocos",
+        "Banana Juice"
+      ]
+    },
+    "LUNCH": {
+      "NonSpl": [
+        "Phulka",
+        "Mango Dal",
+        "Kandi Podi + Ghee",
+        "Aloo Gobi Dry Sabzi",
+        "White Rice",
+        "Sambar",
+        "Mango Pickle(Avakaya)",
+        "Fryums",
+        "Butter Milk"
+      ],
+      "Spl": [
+        "Sweet:- Chakra Pongal"
+      ]
+    },
+    "SNACKS": {
+      "NonSpl": [
+        "Veg Puff",
+        "Sauce",
+        "Tea"
+      ],
+      "Spl": []
+    },
+    "DINNER": {
+      "NonSpl": [
+        "Chapathi",
+        "Panneer Butter Masala / Chicken Butter Masala",
+        "White Rice",
+        "Dal Tadka",
+        "Rasam",
+        "Carrot And Beans Poriyal",
+        "Curd",
+        "Seasonal Fruits",
+        "Pickle",
+        "Milk",
+        "Coffee",
+        "Onions"
+      ],
+      "Spl": [
+        "Soup:- Tomato Soup With Bread Sticks"
+      ]
+    }
+  },
+  {
+    "DAY": "Tuesday",
+    "DATE": "13",
+    "BREAKFAST": {
+      "NonSpl": [
+        "Toasted Pav Bhaji",
+        "Mysore Bonda(3pcs)",
+        "Sambar",
+        "Ground Chutney",
+        "Green Chutney",
+        "Bread + Butter + Jam",
+        "Coffee / Milk",
+        "Sprouts"
+      ],
+      "Spl": [
+        "Cornflakes",
+        "Apple Juice"
+      ]
+    },
+    "LUNCH": {
+      "NonSpl": [
+        "Phulka",
+        "Sambar Rice",
+        "Rajma Masala",
+        "Dal Fry",
+        "Mix Veg Poriyal(Cabbage+Beans+Carrot)",
+        "White Rice",
+        "Tomato Rasam",
+        "Tomato Chutney",
+        "Lemon Water",
+        "Curd Vadai",
+        "Potato Chips"
+      ],
+      "Spl": [
+        "Sweet : -Rasgulla"
+      ]
+    },
+    "SNACKS": {
+      "NonSpl": [
+        "Big Samosa",
+        "Imly Chutney",
+        "Badam Milk"
+      ],
+      "Spl": []
+    },
+    "DINNER": {
+      "NonSpl": [
+        "Phulka",
+        "Chettinadu Egg Masala",
+        "Dosakaya Dal",
+        "Sambar",
+        "Rice",
+        "Mix Veg Curry",
+        "Curd",
+        "Milk",
+        "Coffee",
+        "Watermelon",
+        "Pickle"
+      ],
+      "Spl": [
+        "Soup :- Corn Soup"
+      ]
+    }
+  },
+  {
+    "DAY": "Tuesday",
+    "DATE": "27",
+    "BREAKFAST": {
+      "NonSpl": [
+        "Toasted Pav Bhaji",
+        "Mysore Bonda(3pcs)",
+        "Sambar",
+        "Ground Chutney",
+        "Green Chutney",
+        "Bread + Butter + Jam",
+        "Coffee / Milk",
+        "Sprouts"
+      ],
+      "Spl": [
+        "Cornflakes",
+        "Apple Juice"
+      ]
+    },
+    "LUNCH": {
+      "NonSpl": [
+        "Phulka",
+        "Sambar Rice",
+        "Rajma Masala",
+        "Dal Fry",
+        "Mix Veg Poriyal(Cabbage+Beans+Carrot)",
+        "White Rice",
+        "Tomato Rasam",
+        "Tomato Chutney",
+        "Lemon Water",
+        "Curd Vadai",
+        "Potato Chips"
+      ],
+      "Spl": [
+        "Sweet : -Rasgulla"
+      ]
+    },
+    "SNACKS": {
+      "NonSpl": [
+        "Big Samosa",
+        "Imly Chutney",
+        "Badam Milk"
+      ],
+      "Spl": []
+    },
+    "DINNER": {
+      "NonSpl": [
+        "Phulka",
+        "Chettinadu Egg Masala",
+        "Dosakaya Dal",
+        "Sambar",
+        "Rice",
+        "Mix Veg Curry",
+        "Curd",
+        "Milk",
+        "Coffee",
+        "Watermelon",
+        "Pickle"
+      ],
+      "Spl": [
+        "Soup :- Corn Soup"
+      ]
+    }
+  },
+  {
+    "DAY": "Wednesday",
+    "DATE": "14",
+    "BREAKFAST": {
+      "NonSpl": [
+        "Millet Upma/ Rava Kitchadi(Alternate Week)",
+        "Masala Dosai + Sambar + Coconut Chutney",
+        "Boiled Egg",
+        "Brown Bread+ Butter + Jam",
+        "Coffee / Milk",
+        "Sprouts"
+      ],
+      "Spl": [
+        "Chocos",
+        "Orange Juice"
+      ]
+    },
+    "LUNCH": {
+      "NonSpl": [
+        "(Chicken/ Paneer) 65",
+        "Veg Chatpata",
+        "Phulka",
+        "Jeera Pulao",
+        "Dal Makhani",
+        "Rasam",
+        "White Rice",
+        "Onion Raita",
+        "Green Chilly Chutney",
+        "Onions"
+      ],
+      "Spl": [
+        "Sweet:- Fruit Custard"
+      ]
+    },
+    "SNACKS": {
+      "NonSpl": [
+        "Boiled Peanuts And Tea"
+      ],
+      "Spl": [
+        "French Fries",
+        "Tomato Ketchup",
+        "Tang"
+      ]
+    },
+    "DINNER": {
+      "NonSpl": [
+        "Chapathi",
+        "Soya Gravy Curry",
+        "Tomato Dal",
+        "Cabbage Fry(Deep Fry)",
+        "White Rice",
+        "Sambar",
+        "Curd Rice",
+        "Milk",
+        "Coffee",
+        "Grapes",
+        "Pickle",
+        "Gulab Jamun/Kala Jamun(Alternate Week)"
+      ],
+      "Spl": [
+        "Soup:- Manchow Soup"
+      ]
+    }
+  },
+  {
+    "DAY": "Wednesday",
+    "DATE": "28",
+    "BREAKFAST": {
+      "NonSpl": [
+        "Millet Upma/ Rava Kitchadi(Alternate Week)",
+        "Masala Dosai + Sambar + Coconut Chutney",
+        "Boiled Egg",
+        "Brown Bread+ Butter + Jam",
+        "Coffee / Milk",
+        "Sprouts"
+      ],
+      "Spl": [
+        "Chocos",
+        "Orange Juice"
+      ]
+    },
+    "LUNCH": {
+      "NonSpl": [
+        "(Chicken/ Paneer) 65",
+        "Veg Chatpata",
+        "Phulka",
+        "Jeera Pulao",
+        "Dal Makhani",
+        "Rasam",
+        "White Rice",
+        "Onion Raita",
+        "Green Chilly Chutney",
+        "Onions"
+      ],
+      "Spl": [
+        "Sweet:- Fruit Custard"
+      ]
+    },
+    "SNACKS": {
+      "NonSpl": [
+        "Boiled Peanuts And Tea"
+      ],
+      "Spl": [
+        "French Fries",
+        "Tomato Ketchup",
+        "Tang"
+      ]
+    },
+    "DINNER": {
+      "NonSpl": [
+        "Chapathi",
+        "Soya Gravy Curry",
+        "Tomato Dal",
+        "Cabbage Fry(Deep Fry)",
+        "White Rice",
+        "Sambar",
+        "Curd Rice",
+        "Milk",
+        "Coffee",
+        "Grapes",
+        "Pickle",
+        "Gulab Jamun/Kala Jamun(Alternate Week)"
+      ],
+      "Spl": [
+        "Soup:- Manchow Soup"
+      ]
+    }
+  },
+  {
+    "DAY": "Thursday",
+    "DATE": "01",
+    "BREAKFAST": {
+      "NonSpl": [
+        "Poori(5pcs)",
+        "Aloo Besan Onion Curry",
+        "Tomato Bath",
+        "Ground Nut Chutney",
+        "Egg Podimas",
+        "Bread + Butter + Jam",
+        "Coffee / Milk",
+        "Sprouts"
+      ],
+      "Spl": [
+        "Cornflakes",
+        "Pomegranate Juice"
+      ]
+    },
+    "LUNCH": {
+      "NonSpl": [
+        "Phulka",
+        "Palak Dal",
+        "Majiga Pulusu",
+        "Papula Podi + Ghee",
+        "Raw Banana Poriyal",
+        "White Rice",
+        "Rasam",
+        "Coriander Chutney",
+        "Fryums",
+        "Lemon Water"
+      ],
+      "Spl": [
+        "Sweet:- Badam Burfi"
+      ]
+    },
+    "SNACKS": {
+      "NonSpl": [
+        "Papidi Chat/Toasted Vada Pav And Green Chutney (Alternate Week)Tea"
+      ],
+      "Spl": []
+    },
+    "DINNER": {
+      "NonSpl": [
+        "Maggie(1bowl)",
+        "Roti",
+        "Veg Kadai",
+        "Amarantus Dal",
+        "White Rice",
+        "Sambar",
+        "Aloo Deep Fry",
+        "Milk",
+        "Curd",
+        "Coffee",
+        "Cut Fruits",
+        "Pickle"
+      ],
+      "Spl": [
+        "Veg Khurma",
+        "Soup:- Hot & Sour Soup"
+      ]
+    }
+  },
+  {
+    "DAY": "Thursday",
+    "DATE": "15",
+    "BREAKFAST": {
+      "NonSpl": [
+        "Poori(5pcs)",
+        "Aloo Besan Onion Curry",
+        "Tomato Bath",
+        "Ground Nut Chutney",
+        "Egg Podimas",
+        "Bread + Butter + Jam",
+        "Coffee / Milk",
+        "Sprouts"
+      ],
+      "Spl": [
+        "Cornflakes",
+        "Pomegranate Juice"
+      ]
+    },
+    "LUNCH": {
+      "NonSpl": [
+        "Phulka",
+        "Palak Dal",
+        "Majiga Pulusu",
+        "Papula Podi + Ghee",
+        "Raw Banana Poriyal",
+        "White Rice",
+        "Rasam",
+        "Coriander Chutney",
+        "Fryums",
+        "Lemon Water"
+      ],
+      "Spl": [
+        "Sweet:- Badam Burfi"
+      ]
+    },
+    "SNACKS": {
+      "NonSpl": [
+        "Papidi Chat/Toasted Vada Pav And Green Chutney (Alternate Week)Tea"
+      ],
+      "Spl": []
+    },
+    "DINNER": {
+      "NonSpl": [
+        "Maggie(1bowl)",
+        "Roti",
+        "Veg Kadai",
+        "Amarantus Dal",
+        "White Rice",
+        "Sambar",
+        "Aloo Deep Fry",
+        "Milk",
+        "Curd",
+        "Coffee",
+        "Cut Fruits",
+        "Pickle"
+      ],
+      "Spl": [
+        "Veg Khurma",
+        "Soup:- Hot & Sour Soup"
+      ]
+    }
+  },
+  {
+    "DAY": "Thursday",
+    "DATE": "29",
+    "BREAKFAST": {
+      "NonSpl": [
+        "Poori(5pcs)",
+        "Aloo Besan Onion Curry",
+        "Tomato Bath",
+        "Ground Nut Chutney",
+        "Egg Podimas",
+        "Bread + Butter + Jam",
+        "Coffee / Milk",
+        "Sprouts"
+      ],
+      "Spl": [
+        "Cornflakes",
+        "Pomegranate Juice"
+      ]
+    },
+    "LUNCH": {
+      "NonSpl": [
+        "Phulka",
+        "Palak Dal",
+        "Majiga Pulusu",
+        "Papula Podi + Ghee",
+        "Raw Banana Poriyal",
+        "White Rice",
+        "Rasam",
+        "Coriander Chutney",
+        "Fryums",
+        "Lemon Water"
+      ],
+      "Spl": [
+        "Sweet:- Badam Burfi"
+      ]
+    },
+    "SNACKS": {
+      "NonSpl": [
+        "Papidi Chat/Toasted Vada Pav And Green Chutney (Alternate Week)Tea"
+      ],
+      "Spl": []
+    },
+    "DINNER": {
+      "NonSpl": [
+        "Maggie(1bowl)",
+        "Roti",
+        "Veg Kadai",
+        "Amarantus Dal",
+        "White Rice",
+        "Sambar",
+        "Aloo Deep Fry",
+        "Milk",
+        "Curd",
+        "Coffee",
+        "Cut Fruits",
+        "Pickle"
+      ],
+      "Spl": [
+        "Veg Khurma",
+        "Soup:- Hot & Sour Soup"
+      ]
+    }
+  },
+  {
+    "DAY": "Friday",
+    "DATE": "02",
+    "BREAKFAST": {
+      "NonSpl": [
+        "Idli",
+        "Vada",
+        "Sambar",
+        "Ground Nut Chutney",
+        "Omlette",
+        "Brown Bread + Butter + Jam",
+        "Coffee / Milk",
+        "Sprouts"
+      ],
+      "Spl": [
+        "Boiled Egg",
+        "Chocos",
+        "Cold Badam Milkshake"
+      ]
+    },
+    "LUNCH": {
+      "NonSpl": [
+        "Phulkha",
+        "Veg Pulao",
+        "White Rice",
+        "Aloo Mattar Kurma",
+        "Beetroot Poriyal",
+        "Sambar",
+        "Dal Maharani",
+        "Butter Milk",
+        "Dondakaya Chutney",
+        "Papad",
+        "Shahi Thukda"
+      ],
+      "Spl": []
+    },
+    "SNACKS": {
+      "NonSpl": [
+        "Sweet Corn(With Onions And Tomato….No Capsicum)",
+        "Tea"
+      ],
+      "Spl": []
+    },
+    "DINNER": {
+      "NonSpl": [
+        "Roti",
+        "Gujarati Dal",
+        "Shahi(Panner/Chicken)",
+        "Tomato Rice",
+        "White Rice",
+        "Sambar",
+        "Veg Poriyal",
+        "Curd",
+        "Banana",
+        "Pickle",
+        "Onions"
+      ],
+      "Spl": [
+        "Soup:- Corn Soup"
+      ]
+    }
+  },
+  {
+    "DAY": "Friday",
+    "DATE": "16",
+    "BREAKFAST": {
+      "NonSpl": [
+        "Idli",
+        "Vada",
+        "Sambar",
+        "Ground Nut Chutney",
+        "Omlette",
+        "Brown Bread + Butter + Jam",
+        "Coffee / Milk",
+        "Sprouts"
+      ],
+      "Spl": [
+        "Boiled Egg",
+        "Chocos",
+        "Cold Badam Milkshake"
+      ]
+    },
+    "LUNCH": {
+      "NonSpl": [
+        "Phulkha",
+        "Veg Pulao",
+        "White Rice",
+        "Aloo Mattar Kurma",
+        "Beetroot Poriyal",
+        "Sambar",
+        "Dal Maharani",
+        "Butter Milk",
+        "Dondakaya Chutney",
+        "Papad",
+        "Shahi Thukda"
+      ],
+      "Spl": []
+    },
+    "SNACKS": {
+      "NonSpl": [
+        "Sweet Corn(With Onions And Tomato….No Capsicum)",
+        "Tea"
+      ],
+      "Spl": []
+    },
+    "DINNER": {
+      "NonSpl": [
+        "Roti",
+        "Gujarati Dal",
+        "Shahi(Panner/Chicken)",
+        "Tomato Rice",
+        "White Rice",
+        "Sambar",
+        "Veg Poriyal",
+        "Curd",
+        "Banana",
+        "Pickle",
+        "Onions"
+      ],
+      "Spl": [
+        "Soup:- Corn Soup"
+      ]
+    }
+  },
+  {
+    "DAY": "Friday",
+    "DATE": "30",
+    "BREAKFAST": {
+      "NonSpl": [
+        "Idli",
+        "Vada",
+        "Sambar",
+        "Ground Nut Chutney",
+        "Omlette",
+        "Brown Bread + Butter + Jam",
+        "Coffee / Milk",
+        "Sprouts"
+      ],
+      "Spl": [
+        "Boiled Egg",
+        "Chocos",
+        "Cold Badam Milkshake"
+      ]
+    },
+    "LUNCH": {
+      "NonSpl": [
+        "Phulkha",
+        "Veg Pulao",
+        "White Rice",
+        "Aloo Mattar Kurma",
+        "Beetroot Poriyal",
+        "Sambar",
+        "Dal Maharani",
+        "Butter Milk",
+        "Dondakaya Chutney",
+        "Papad",
+        "Shahi Thukda"
+      ],
+      "Spl": []
+    },
+    "SNACKS": {
+      "NonSpl": [
+        "Sweet Corn(With Onions And Tomato….No Capsicum)",
+        "Tea"
+      ],
+      "Spl": []
+    },
+    "DINNER": {
+      "NonSpl": [
+        "Roti",
+        "Gujarati Dal",
+        "Shahi(Panner/Chicken)",
+        "Tomato Rice",
+        "White Rice",
+        "Sambar",
+        "Veg Poriyal",
+        "Curd",
+        "Banana",
+        "Pickle",
+        "Onions"
+      ],
+      "Spl": [
+        "Soup:- Corn Soup"
+      ]
+    }
+  },
+  {
+    "DAY": "Saturday",
+    "DATE": "03",
+    "BREAKFAST": {
+      "NonSpl": [
+        "Onion Dosa+Sambar+Groundnut Chutney",
+        "Poha",
+        "Egg Podimas",
+        "Bread + Butter + Jam",
+        "Coffee / Milk",
+        "Sprouts"
+      ],
+      "Spl": [
+        "Conflakes",
+        "Ragi Malt"
+      ]
+    },
+    "LUNCH": {
+      "NonSpl": [
+        "Phulka",
+        "Dal Tadka",
+        "Lemon Rice",
+        "White Rice",
+        "Rasam",
+        "Fryums",
+        "Parupu Podi",
+        "Ghee",
+        "Fresh Chutney",
+        "Papad",
+        "Sweet Lassi"
+      ],
+      "Spl": [
+        "Sweet:- Boondi Laddu"
+      ]
+    },
+    "SNACKS": {
+      "NonSpl": [
+        "Bread Pakoda",
+        "Sauce",
+        "Ginger Tea"
+      ],
+      "Spl": []
+    },
+    "DINNER": {
+      "NonSpl": [
+        "Phulka",
+        "Dosakaya Dal",
+        "Kadai Veg",
+        "Sambar",
+        "Jeera Rice",
+        "Veg Manchurian (3pcs+Sauce Separate)",
+        "Curd",
+        "White Rice",
+        "Lemon Pickle",
+        "Milk",
+        "Curd",
+        "Coffee",
+        "Seasonal Fruits",
+        "Bread Halwa"
+      ],
+      "Spl": [
+        "Soup:- Veg Clear Soup"
+      ]
+    }
+  },
+  {
+    "DAY": "Saturday",
+    "DATE": "17",
+    "BREAKFAST": {
+      "NonSpl": [
+        "Onion Dosa+Sambar+Groundnut Chutney",
+        "Poha",
+        "Egg Podimas",
+        "Bread + Butter + Jam",
+        "Coffee / Milk",
+        "Sprouts"
+      ],
+      "Spl": [
+        "Conflakes",
+        "Ragi Malt"
+      ]
+    },
+    "LUNCH": {
+      "NonSpl": [
+        "Phulka",
+        "Dal Tadka",
+        "Lemon Rice",
+        "White Rice",
+        "Rasam",
+        "Fryums",
+        "Parupu Podi",
+        "Ghee",
+        "Fresh Chutney",
+        "Papad",
+        "Sweet Lassi"
+      ],
+      "Spl": [
+        "Sweet:- Boondi Laddu"
+      ]
+    },
+    "SNACKS": {
+      "NonSpl": [
+        "Bread Pakoda",
+        "Sauce",
+        "Ginger Tea"
+      ],
+      "Spl": []
+    },
+    "DINNER": {
+      "NonSpl": [
+        "Phulka",
+        "Dosakaya Dal",
+        "Kadai Veg",
+        "Sambar",
+        "Jeera Rice",
+        "Veg Manchurian (3pcs+Sauce Separate)",
+        "Curd",
+        "White Rice",
+        "Lemon Pickle",
+        "Milk",
+        "Curd",
+        "Coffee",
+        "Seasonal Fruits",
+        "Bread Halwa"
+      ],
+      "Spl": [
+        "Soup:- Veg Clear Soup"
+      ]
+    }
+  },
+  {
+    "DAY": "Saturday",
+    "DATE": "31",
+    "BREAKFAST": {
+      "NonSpl": [
+        "Onion Dosa+Sambar+Groundnut Chutney",
+        "Poha",
+        "Egg Podimas",
+        "Bread + Butter + Jam",
+        "Coffee / Milk",
+        "Sprouts"
+      ],
+      "Spl": [
+        "Conflakes",
+        "Ragi Malt"
+      ]
+    },
+    "LUNCH": {
+      "NonSpl": [
+        "Phulka",
+        "Dal Tadka",
+        "Lemon Rice",
+        "White Rice",
+        "Rasam",
+        "Fryums",
+        "Parupu Podi",
+        "Ghee",
+        "Fresh Chutney",
+        "Papad",
+        "Sweet Lassi"
+      ],
+      "Spl": [
+        "Sweet:- Boondi Laddu"
+      ]
+    },
+    "SNACKS": {
+      "NonSpl": [
+        "Bread Pakoda",
+        "Sauce",
+        "Ginger Tea"
+      ],
+      "Spl": []
+    },
+    "DINNER": {
+      "NonSpl": [
+        "Phulka",
+        "Dosakaya Dal",
+        "Kadai Veg",
+        "Sambar",
+        "Jeera Rice",
+        "Veg Manchurian (3pcs+Sauce Separate)",
+        "Curd",
+        "White Rice",
+        "Lemon Pickle",
+        "Milk",
+        "Curd",
+        "Coffee",
+        "Seasonal Fruits",
+        "Bread Halwa"
+      ],
+      "Spl": [
+        "Soup:- Veg Clear Soup"
+      ]
+    }
+  },
+  {
+    "DAY": "Sunday",
+    "DATE": "04",
+    "BREAKFAST": {
+      "NonSpl": [
+        "Paneer Paratha (2pcs Medium Size)",
+        "Pongal",
+        "Mango Pickle",
+        "Ground Nut Chutney",
+        "Curd",
+        "Brown Bread",
+        "Butter",
+        "Jam",
+        "Black Coffee",
+        "Milk",
+        "Nv-Egg Bhurji",
+        "Sprouts"
+      ],
+      "Spl": [
+        "Chocos",
+        "Pineapple Juice"
+      ]
+    },
+    "LUNCH": {
+      "NonSpl": [
+        "(Basmati Rice)Chicken Dum Biryani/Paneer Dum Vegetable Biryani",
+        "Mirchi Ka Salan",
+        "Phulka",
+        "White Rice",
+        "Dal Fry",
+        "Onion Raitha",
+        "Onion",
+        "Lemonjuice",
+        "Vanilla/Chocolate/Strawberry Ice Cream"
+      ],
+      "Spl": []
+    },
+    "SNACKS": {
+      "NonSpl": [
+        "Pani Poori",
+        "Onions",
+        "Masala Tea"
+      ],
+      "Spl": []
+    },
+    "DINNER": {
+      "NonSpl": [
+        "Phulka",
+        "Dal Punjabi",
+        "Aloo And Channa Masala",
+        "Rice",
+        "Vankaya Curry",
+        "Sambhar",
+        "Curd Rice",
+        "White Rice",
+        "Watermelon",
+        "Black Coffee",
+        "Milk",
+        "Mango Pickle"
+      ],
+      "Spl": [
+        "Soup:- Tomato Soup With Bread Sticks"
+      ]
+    }
+  },
+  {
+    "DAY": "Sunday",
+    "DATE": "18",
+    "BREAKFAST": {
+      "NonSpl": [
+        "Paneer Paratha (2pcs Medium Size)",
+        "Pongal",
+        "Mango Pickle",
+        "Ground Nut Chutney",
+        "Curd",
+        "Brown Bread",
+        "Butter",
+        "Jam",
+        "Black Coffee",
+        "Milk",
+        "Nv-Egg Bhurji",
+        "Sprouts"
+      ],
+      "Spl": [
+        "Chocos",
+        "Pineapple Juice"
+      ]
+    },
+    "LUNCH": {
+      "NonSpl": [
+        "(Basmati Rice)Chicken Dum Biryani/Paneer Dum Vegetable Biryani",
+        "Mirchi Ka Salan",
+        "Phulka",
+        "White Rice",
+        "Dal Fry",
+        "Onion Raitha",
+        "Onion",
+        "Lemonjuice",
+        "Vanilla/Chocolate/Strawberry Ice Cream"
+      ],
+      "Spl": []
+    },
+    "SNACKS": {
+      "NonSpl": [
+        "Pani Poori",
+        "Onions",
+        "Masala Tea"
+      ],
+      "Spl": []
+    },
+    "DINNER": {
+      "NonSpl": [
+        "Phulka",
+        "Dal Punjabi",
+        "Aloo And Channa Masala",
+        "Rice",
+        "Vankaya Curry",
+        "Sambhar",
+        "Curd Rice",
+        "White Rice",
+        "Watermelon",
+        "Black Coffee",
+        "Milk",
+        "Mango Pickle"
+      ],
+      "Spl": [
+        "Soup:- Tomato Soup With Bread Sticks"
+      ]
+    }
+  },
+  {
+    "DAY": "Monday",
+    "DATE": "05",
+    "BREAKFAST": {
+      "NonSpl": [
+        "Chole Bhature(2pcs)",
+        "Poha",
+        "Egg Podimas",
+        "Bread + Butter + Jam",
+        "Coffee / Milk",
+        "Sprouts"
+      ],
+      "Spl": [
+        "Cornflakes",
+        "Apple Juice"
+      ]
+    },
+    "LUNCH": {
+      "NonSpl": [
+        "Phulka",
+        "Black Dhal Makani",
+        "Tomato Rice",
+        "Nizami Veg",
+        "White Rice",
+        "Rasam",
+        "Curd",
+        "Fryums",
+        "Parupu Podi",
+        "Ghee",
+        "Thovaiyal",
+        "Papad",
+        "Butter Milk"
+      ],
+      "Spl": [
+        "Sweet :- Milk Mysore Pak"
+      ]
+    },
+    "SNACKS": {
+      "NonSpl": [
+        "Veg Puff",
+        "Sauce",
+        "Tea"
+      ],
+      "Spl": []
+    },
+    "DINNER": {
+      "NonSpl": [
+        "Chapathi",
+        "Panneer Butter Masala / Chicken Butter Masala",
+        "White Rice",
+        "Palak Dal",
+        "Sambar",
+        "Carrot And Beans Poriyal",
+        "Curd",
+        "Banana",
+        "Amla Pickle",
+        "Onions",
+        "Milk",
+        "Coffee"
+      ],
+      "Spl": [
+        "Soup:-Corn Soup"
+      ]
+    }
+  },
+  {
+    "DAY": "Monday",
+    "DATE": "19",
+    "BREAKFAST": {
+      "NonSpl": [
+        "Chole Bhature(2pcs)",
+        "Poha",
+        "Egg Podimas",
+        "Bread + Butter + Jam",
+        "Coffee / Milk",
+        "Sprouts"
+      ],
+      "Spl": [
+        "Cornflakes",
+        "Apple Juice"
+      ]
+    },
+    "LUNCH": {
+      "NonSpl": [
+        "Phulka",
+        "Black Dhal Makani",
+        "Tomato Rice",
+        "Nizami Veg",
+        "White Rice",
+        "Rasam",
+        "Curd",
+        "Fryums",
+        "Parupu Podi",
+        "Ghee",
+        "Thovaiyal",
+        "Papad",
+        "Butter Milk"
+      ],
+      "Spl": [
+        "Sweet :- Milk Mysore Pak"
+      ]
+    },
+    "SNACKS": {
+      "NonSpl": [
+        "Veg Puff",
+        "Sauce",
+        "Tea"
+      ],
+      "Spl": []
+    },
+    "DINNER": {
+      "NonSpl": [
+        "Chapathi",
+        "Panneer Butter Masala / Chicken Butter Masala",
+        "White Rice",
+        "Palak Dal",
+        "Sambar",
+        "Carrot And Beans Poriyal",
+        "Curd",
+        "Banana",
+        "Amla Pickle",
+        "Onions",
+        "Milk",
+        "Coffee"
+      ],
+      "Spl": [
+        "Soup:-Corn Soup"
+      ]
+    }
+  },
+  {
+    "DAY": "Tuesday",
+    "DATE": "06",
+    "BREAKFAST": {
+      "NonSpl": [
+        "Pav Bhajji",
+        "Masala Dosa",
+        "Sambar",
+        "Ground Chutney",
+        "Brown Bread + Butter + Jam",
+        "Coffee / Milk",
+        "Sprouts"
+      ],
+      "Spl": [
+        "Chocos",
+        "Ragi Malt"
+      ]
+    },
+    "LUNCH": {
+      "NonSpl": [
+        "Phulka",
+        "Bisibillabath",
+        "Rajma Masala",
+        "Dal Fry",
+        "Mix Veg Poriyal(Cabbage+Beans+Carrot)",
+        "White Rice",
+        "Tomato Rasam",
+        "Tomato Chutney",
+        "Lemon Water",
+        "Curd Vadai",
+        "Potato Chips"
+      ],
+      "Spl": [
+        "Sweet :- Motichor Laddu"
+      ]
+    },
+    "SNACKS": {
+      "NonSpl": [
+        "Punugulu",
+        "Ground Nut Chutney",
+        "Tea"
+      ],
+      "Spl": []
+    },
+    "DINNER": {
+      "NonSpl": [
+        "Phulka",
+        "Chettinadu Egg Masala",
+        "Dosakaya Dal",
+        "Sambar",
+        "Rice",
+        "Mix Veg Curry",
+        "Curd",
+        "Milk",
+        "Coffee",
+        "Grapes",
+        "Pickle"
+      ],
+      "Spl": [
+        "Soup :- Manchow Soup"
+      ]
+    }
+  },
+  {
+    "DAY": "Tuesday",
+    "DATE": "20",
+    "BREAKFAST": {
+      "NonSpl": [
+        "Pav Bhajji",
+        "Masala Dosa",
+        "Sambar",
+        "Ground Chutney",
+        "Brown Bread + Butter + Jam",
+        "Coffee / Milk",
+        "Sprouts"
+      ],
+      "Spl": [
+        "Chocos",
+        "Ragi Malt"
+      ]
+    },
+    "LUNCH": {
+      "NonSpl": [
+        "Phulka",
+        "Bisibillabath",
+        "Rajma Masala",
+        "Dal Fry",
+        "Mix Veg Poriyal(Cabbage+Beans+Carrot)",
+        "White Rice",
+        "Tomato Rasam",
+        "Tomato Chutney",
+        "Lemon Water",
+        "Curd Vadai",
+        "Potato Chips"
+      ],
+      "Spl": [
+        "Sweet :- Motichor Laddu"
+      ]
+    },
+    "SNACKS": {
+      "NonSpl": [
+        "Punugulu",
+        "Ground Nut Chutney",
+        "Tea"
+      ],
+      "Spl": []
+    },
+    "DINNER": {
+      "NonSpl": [
+        "Phulka",
+        "Chettinadu Egg Masala",
+        "Dosakaya Dal",
+        "Sambar",
+        "Rice",
+        "Mix Veg Curry",
+        "Curd",
+        "Milk",
+        "Coffee",
+        "Grapes",
+        "Pickle"
+      ],
+      "Spl": [
+        "Soup :- Manchow Soup"
+      ]
+    }
+  },
+  {
+    "DAY": "Wednesday",
+    "DATE": "07",
+    "BREAKFAST": {
+      "NonSpl": [
+        "Idli",
+        "Vada",
+        "Sambar",
+        "Coconut Chutney",
+        "Egg Omelette",
+        "Brown Bread + Butter + Jam",
+        "Coffee / Milk",
+        "Sprouts"
+      ],
+      "Spl": [
+        "Cornflakes",
+        "Cold Badam Milkshake"
+      ]
+    },
+    "LUNCH": {
+      "NonSpl": [
+        "Andhra Style Paneer Curry/Chicken 65",
+        "Veg Chatpata",
+        "Phulka",
+        "Jeera Pulao",
+        "Dal Makhani",
+        "Rasam",
+        "White Rice",
+        "Onion Raita",
+        "Green Chilly Chutney",
+        "Onions"
+      ],
+      "Spl": [
+        "Sweet :- Doodh Peda"
+      ]
+    },
+    "SNACKS": {
+      "NonSpl": [
+        "Onion Pakoda",
+        "Ground Nut Chutney",
+        "Tea"
+      ],
+      "Spl": []
+    },
+    "DINNER": {
+      "NonSpl": [
+        "Chapathi",
+        "Soya Gravy Curry",
+        "Tomato Dal",
+        "Cabbage Fry(Deep Fry)",
+        "White Rice",
+        "Sambar",
+        "Curd Rice",
+        "Milk",
+        "Coffee",
+        "Cut Fruits",
+        "Pickle",
+        "Boondi Laddu"
+      ],
+      "Spl": [
+        "Soup:-Hot & Sour Soup"
+      ]
+    }
+  },
+  {
+    "DAY": "Wednesday",
+    "DATE": "21",
+    "BREAKFAST": {
+      "NonSpl": [
+        "Idli",
+        "Vada",
+        "Sambar",
+        "Coconut Chutney",
+        "Egg Omelette",
+        "Brown Bread + Butter + Jam",
+        "Coffee / Milk",
+        "Sprouts"
+      ],
+      "Spl": [
+        "Cornflakes",
+        "Cold Badam Milkshake"
+      ]
+    },
+    "LUNCH": {
+      "NonSpl": [
+        "Andhra Style Paneer Curry/Chicken 65",
+        "Veg Chatpata",
+        "Phulka",
+        "Jeera Pulao",
+        "Dal Makhani",
+        "Rasam",
+        "White Rice",
+        "Onion Raita",
+        "Green Chilly Chutney",
+        "Onions"
+      ],
+      "Spl": [
+        "Sweet :- Doodh Peda"
+      ]
+    },
+    "SNACKS": {
+      "NonSpl": [
+        "Onion Pakoda",
+        "Ground Nut Chutney",
+        "Tea"
+      ],
+      "Spl": []
+    },
+    "DINNER": {
+      "NonSpl": [
+        "Chapathi",
+        "Soya Gravy Curry",
+        "Tomato Dal",
+        "Cabbage Fry(Deep Fry)",
+        "White Rice",
+        "Sambar",
+        "Curd Rice",
+        "Milk",
+        "Coffee",
+        "Cut Fruits",
+        "Pickle",
+        "Boondi Laddu"
+      ],
+      "Spl": [
+        "Soup:-Hot & Sour Soup"
+      ]
+    }
+  },
+  {
+    "DAY": "Thursday",
+    "DATE": "08",
+    "BREAKFAST": {
+      "NonSpl": [
+        "Poori(5 Pcs)",
+        "Aloo Black Channa Curry",
+        "Wheat Upma",
+        "Ground Nut Chutney",
+        "Egg Podimas",
+        "Bread + Butter + Jam",
+        "Coffee / Milk",
+        "Sprouts"
+      ],
+      "Spl": [
+        "Cornflakes",
+        "Pomegranate Juice"
+      ]
+    },
+    "LUNCH": {
+      "NonSpl": [
+        "Phulka",
+        "Palak Dal",
+        "Majiga Pulusu",
+        "Papula Podi + Ghee",
+        "Dum Aloo",
+        "White Rice",
+        "Rasam",
+        "Coriander Chutney",
+        "Fryums",
+        "Lemon Water"
+      ],
+      "Spl": [
+        "Sweet:- Carrot Halwa"
+      ]
+    },
+    "SNACKS": {
+      "NonSpl": [
+        "Boiled Peanuts And Chocolate Milkshake"
+      ],
+      "Spl": [
+        "French Fries",
+        "Tomato Ketchup",
+        "Chocolate Milkshake"
+      ]
+    },
+    "DINNER": {
+      "NonSpl": [
+        "Maggie (1bowl)Roti",
+        "Veg Kurma",
+        "Amarantus Dal",
+        "White Rice",
+        "Sambar",
+        "Bhindi Deep Fry(Peanuts)",
+        "Milk",
+        "Curd",
+        "Coffee",
+        "Banana",
+        "Pickle"
+      ],
+      "Spl": [
+        "Soup:- Tomato Shorba"
+      ]
+    }
+  },
+  {
+    "DAY": "Thursday",
+    "DATE": "22",
+    "BREAKFAST": {
+      "NonSpl": [
+        "Poori(5 Pcs)",
+        "Aloo Black Channa Curry",
+        "Wheat Upma",
+        "Ground Nut Chutney",
+        "Egg Podimas",
+        "Bread + Butter + Jam",
+        "Coffee / Milk",
+        "Sprouts"
+      ],
+      "Spl": [
+        "Cornflakes",
+        "Pomegranate Juice"
+      ]
+    },
+    "LUNCH": {
+      "NonSpl": [
+        "Phulka",
+        "Palak Dal",
+        "Majiga Pulusu",
+        "Papula Podi + Ghee",
+        "Dum Aloo",
+        "White Rice",
+        "Rasam",
+        "Coriander Chutney",
+        "Fryums",
+        "Lemon Water"
+      ],
+      "Spl": [
+        "Sweet:- Carrot Halwa"
+      ]
+    },
+    "SNACKS": {
+      "NonSpl": [
+        "Boiled Peanuts And Chocolate Milkshake"
+      ],
+      "Spl": [
+        "French Fries",
+        "Tomato Ketchup",
+        "Chocolate Milkshake"
+      ]
+    },
+    "DINNER": {
+      "NonSpl": [
+        "Maggie (1bowl)Roti",
+        "Veg Kurma",
+        "Amarantus Dal",
+        "White Rice",
+        "Sambar",
+        "Bhindi Deep Fry(Peanuts)",
+        "Milk",
+        "Curd",
+        "Coffee",
+        "Banana",
+        "Pickle"
+      ],
+      "Spl": [
+        "Soup:- Tomato Shorba"
+      ]
+    }
+  },
+  {
+    "DAY": "Friday",
+    "DATE": "09",
+    "BREAKFAST": {
+      "NonSpl": [
+        "Podi/Karam Dosa+Sambar+Chutney",
+        "Uggani",
+        "Brown Bread + Butter + Jam",
+        "Coffee / Milk",
+        "Boiled Egg",
+        "Sprouts"
+      ],
+      "Spl": [
+        "Chocos",
+        "Orange Juice"
+      ]
+    },
+    "LUNCH": {
+      "NonSpl": [
+        "Phulka",
+        "Hing Tadka Dal",
+        "Soya Pulao",
+        "White Rice",
+        "Fryums",
+        "Veg Kadai",
+        "Snake Guard Kottu",
+        "Rasam",
+        ".(Sliced Cucumber",
+        "Carrot)",
+        "Butter Milk",
+        "Ghee",
+        "Jalebi"
+      ],
+      "Spl": []
+    },
+    "SNACKS": {
+      "NonSpl": [
+        "Sweet Corn(With Onions And Tomato….No Capsicum)",
+        "Tea"
+      ],
+      "Spl": []
+    },
+    "DINNER": {
+      "NonSpl": [
+        "Gujarati Dal",
+        "(Chicken/Paneer)Lababdar",
+        "Lacha Paratha(2pcs)",
+        "White Rice",
+        "Sambar",
+        "Veg Poriyal",
+        "Seasonal Fruit",
+        "Curd",
+        "Pickle",
+        "Onions"
+      ],
+      "Spl": [
+        "Soup:- Corn Soup"
+      ]
+    }
+  },
+  {
+    "DAY": "Friday",
+    "DATE": "23",
+    "BREAKFAST": {
+      "NonSpl": [
+        "Podi/Karam Dosa+Sambar+Chutney",
+        "Uggani",
+        "Brown Bread + Butter + Jam",
+        "Coffee / Milk",
+        "Boiled Egg",
+        "Sprouts"
+      ],
+      "Spl": [
+        "Chocos",
+        "Orange Juice"
+      ]
+    },
+    "LUNCH": {
+      "NonSpl": [
+        "Phulka",
+        "Hing Tadka Dal",
+        "Soya Pulao",
+        "White Rice",
+        "Fryums",
+        "Veg Kadai",
+        "Snake Guard Kottu",
+        "Rasam",
+        ".(Sliced Cucumber",
+        "Carrot)",
+        "Butter Milk",
+        "Ghee",
+        "Jalebi"
+      ],
+      "Spl": []
+    },
+    "SNACKS": {
+      "NonSpl": [
+        "Sweet Corn(With Onions And Tomato….No Capsicum)",
+        "Tea"
+      ],
+      "Spl": []
+    },
+    "DINNER": {
+      "NonSpl": [
+        "Gujarati Dal",
+        "(Chicken/Paneer)Lababdar",
+        "Lacha Paratha(2pcs)",
+        "White Rice",
+        "Sambar",
+        "Veg Poriyal",
+        "Seasonal Fruit",
+        "Curd",
+        "Pickle",
+        "Onions"
+      ],
+      "Spl": [
+        "Soup:- Corn Soup"
+      ]
+    }
+  },
+  {
+    "DAY": "Saturday",
+    "DATE": "10",
+    "BREAKFAST": {
+      "NonSpl": [
+        "Onion/Mysore Bonda(3pcs)(Alternate Week)",
+        "Poha",
+        "Boiled Channa With Tomato Onion(Sprouts)",
+        "Sambar",
+        "Ground Nut Chutney",
+        "Masala Omlette",
+        "Bread + Butter + Jam",
+        "Coffee / Milk"
+      ],
+      "Spl": [
+        "Muesli",
+        "Banana Milkshake"
+      ]
+    },
+    "LUNCH": {
+      "NonSpl": [
+        "Phulka",
+        "Dal Maharani",
+        "Pudina Rice",
+        "Aloo Gobi Curry",
+        "White Rice",
+        "Rasam",
+        "Fryums",
+        "Parupu Podi",
+        "Ghee",
+        "Fresh Chutney",
+        "Papad",
+        "Sweet Lassi"
+      ],
+      "Spl": [
+        "Sweet :- Kurbhani Ka Metha"
+      ]
+    },
+    "SNACKS": {
+      "NonSpl": [
+        "Bread Pakoda",
+        "Sauce",
+        "Ginger Tea"
+      ],
+      "Spl": []
+    },
+    "DINNER": {
+      "NonSpl": [
+        "Phulka",
+        "Tomato Dal",
+        "Rajma Masala",
+        "Sambar",
+        "Coconut Rice",
+        "Aloo Deep Fry",
+        "Curd",
+        "White Rice",
+        "Lemon Pickle",
+        "Milk",
+        "Curd",
+        "Coffee",
+        "Grapes",
+        "Semiya Payasam"
+      ],
+      "Spl": [
+        "Soup:- Veg Clear Soup"
+      ]
+    }
+  },
+  {
+    "DAY": "Saturday",
+    "DATE": "24",
+    "BREAKFAST": {
+      "NonSpl": [
+        "Onion/Mysore Bonda(3pcs)(Alternate Week)",
+        "Poha",
+        "Boiled Channa With Tomato Onion(Sprouts)",
+        "Sambar",
+        "Ground Nut Chutney",
+        "Masala Omlette",
+        "Bread + Butter + Jam",
+        "Coffee / Milk"
+      ],
+      "Spl": [
+        "Muesli",
+        "Banana Milkshake"
+      ]
+    },
+    "LUNCH": {
+      "NonSpl": [
+        "Phulka",
+        "Dal Maharani",
+        "Pudina Rice",
+        "Aloo Gobi Curry",
+        "White Rice",
+        "Rasam",
+        "Fryums",
+        "Parupu Podi",
+        "Ghee",
+        "Fresh Chutney",
+        "Papad",
+        "Sweet Lassi"
+      ],
+      "Spl": [
+        "Sweet :- Kurbhani Ka Metha"
+      ]
+    },
+    "SNACKS": {
+      "NonSpl": [
+        "Bread Pakoda",
+        "Sauce",
+        "Ginger Tea"
+      ],
+      "Spl": []
+    },
+    "DINNER": {
+      "NonSpl": [
+        "Phulka",
+        "Tomato Dal",
+        "Rajma Masala",
+        "Sambar",
+        "Coconut Rice",
+        "Aloo Deep Fry",
+        "Curd",
+        "White Rice",
+        "Lemon Pickle",
+        "Milk",
+        "Curd",
+        "Coffee",
+        "Grapes",
+        "Semiya Payasam"
+      ],
+      "Spl": [
+        "Soup:- Veg Clear Soup"
+      ]
+    }
+  },
+  {
+    "DAY": "Sunday",
+    "DATE": "11",
+    "BREAKFAST": {
+      "NonSpl": [
+        "Aloo Paratha(2pcs)",
+        "Pongal",
+        "Ground Nut Chutney",
+        "Curd",
+        "Mango Pickle",
+        "Bread",
+        "Butter",
+        "Jam",
+        "Black Coffee",
+        "Milk",
+        "Nv-Egg Podimas",
+        "Sprouts"
+      ],
+      "Spl": [
+        "Cornflakes",
+        "Pineapple Juice"
+      ]
+    },
+    "LUNCH": {
+      "NonSpl": [
+        "(Basmati Rice)Chicken Dum Biryani/Paneer(7pcs/40gms( Dum Vegetable Biryani",
+        "Mirchi Ka Salan",
+        "Phulka",
+        "White Rice",
+        "Dal Fry",
+        "Onion Raitha",
+        "Onion",
+        "Lemonjuice",
+        "Vanilla/Chocolate/Strawberry Ice Cream"
+      ],
+      "Spl": []
+    },
+    "SNACKS": {
+      "NonSpl": [
+        "Pani Poori",
+        "Onions",
+        "Masala Tea"
+      ],
+      "Spl": []
+    },
+    "DINNER": {
+      "NonSpl": [
+        "Phulka",
+        "Dal Punjabi",
+        "Aloo And Channa Masala",
+        "Rice",
+        "Vankaya Curry",
+        "Sambhar",
+        "Curd Rice",
+        "White Rice",
+        "Water Melon",
+        "Black Coffee",
+        "Milk",
+        "Mango Pickle"
+      ],
+      "Spl": [
+        "Soup :- Manchow Soup"
+      ]
+    }
+  },
+  {
+    "DAY": "Sunday",
+    "DATE": "25",
+    "BREAKFAST": {
+      "NonSpl": [
+        "Aloo Paratha(2pcs)",
+        "Pongal",
+        "Ground Nut Chutney",
+        "Curd",
+        "Mango Pickle",
+        "Bread",
+        "Butter",
+        "Jam",
+        "Black Coffee",
+        "Milk",
+        "Nv-Egg Podimas",
+        "Sprouts"
+      ],
+      "Spl": [
+        "Cornflakes",
+        "Pineapple Juice"
+      ]
+    },
+    "LUNCH": {
+      "NonSpl": [
+        "(Basmati Rice)Chicken Dum Biryani/Paneer(7pcs/40gms( Dum Vegetable Biryani",
+        "Mirchi Ka Salan",
+        "Phulka",
+        "White Rice",
+        "Dal Fry",
+        "Onion Raitha",
+        "Onion",
+        "Lemonjuice",
+        "Vanilla/Chocolate/Strawberry Ice Cream"
+      ],
+      "Spl": []
+    },
+    "SNACKS": {
+      "NonSpl": [
+        "Pani Poori",
+        "Onions",
+        "Masala Tea"
+      ],
+      "Spl": []
+    },
+    "DINNER": {
+      "NonSpl": [
+        "Phulka",
+        "Dal Punjabi",
+        "Aloo And Channa Masala",
+        "Rice",
+        "Vankaya Curry",
+        "Sambhar",
+        "Curd Rice",
+        "White Rice",
+        "Water Melon",
+        "Black Coffee",
+        "Milk",
+        "Mango Pickle"
+      ],
+      "Spl": [
+        "Soup :- Manchow Soup"
+      ]
+    }
+  }
+]
