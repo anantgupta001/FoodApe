@@ -6,11 +6,6 @@ const { getValidHostels, getValidMessTypes } = require('../init/dataLoader');
 // PUT request to update the profile
 module.exports.editProfile = async (req, res) => {
     const { username, name, mobile, email, isHosteler, hostel, messType, currentPassword, newPassword } = req.body;
-
-    console.log('Request Body:', req.body); // Log the entire request body
-    console.log('Hostel:', hostel); // Log the hostel value
-    console.log('isHosteler:', isHosteler); // Log the isHosteler value
-
     try {
         const user = await User.findOne({ username });
 
@@ -71,7 +66,7 @@ module.exports.editProfile = async (req, res) => {
     }
 };
 
-// Update likedFoods
+// Remove likedFoods
 module.exports.removeLikedFoods = async (req, res) => {
     try {
         const userId = req.user._id;
