@@ -16,6 +16,7 @@ module.exports.getBlockData = async (req, res) => {
     }
 }
 
+// This function will be used for the '/block' route
 module.exports.showBlocks = (req, res) => {
     const blockname = req.params.blockname;
     if (!blockname) {
