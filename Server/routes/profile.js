@@ -10,8 +10,13 @@ function ensureAuthenticated(req, res, next) {
     res.status(400).send("User is not logged in!");
 }
 // Middleware to check if the user is logged in
+router.get(
+    '/:username',
+    profileController.showProfile
+);
+
 router.put(
-    '/perosnalInfo/editProfile',
+    '/editProfile',
     ensureAuthenticated,
     profileController.editProfile
 );

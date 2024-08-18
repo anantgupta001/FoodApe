@@ -7,6 +7,10 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    image: { 
+        type: String, 
+        default: "https://cdn-icons-png.freepik.com/512/14024/14024673.png?ga=GA1.1.136595828.1716999341", 
+    },
     mobile: {
         type: String,
         required: true,
