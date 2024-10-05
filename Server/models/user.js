@@ -25,17 +25,16 @@ const userSchema = new mongoose.Schema({
     },
     messType: { 
         type: String, 
-        enum : ["Veg", "Non-Veg", "Special"]
+        enum: ["Veg", "Non-Veg", "Special"]
     },
     likedFoods: [{ 
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Restaurant",
+        ref: "Food",
     }],
-    cart: [{ 
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Order",
-    }]
+    cartOrderID: { type: [String], default: [] },
+    ordersOrderID : { type: [String], default: [] }
 });
+
 
 userSchema.plugin(passportLocalMongoose);
 
