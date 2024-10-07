@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:food_ape/models/userModel.dart';
 import 'package:food_ape/providers/user_provider.dart';
+import 'package:food_ape/screens/profile.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
@@ -48,6 +49,7 @@ class _HomeState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    
     UserProvider userProvider = Provider.of<UserProvider>(context);
     User? user = userProvider.user;
     String getCurrentMeal() {
@@ -79,7 +81,7 @@ class _HomeState extends State<HomePage> {
           children: [
             Icon(Icons.location_on, color: kRustyRed),
             SizedBox(width: 8),
-            Text('VIT AP', style: kBodyMedium.bodyMedium),
+            Text('VIT-AP', style: kBodyMedium.bodyMedium),
             SizedBox(width: 8),
             Icon(Icons.keyboard_arrow_down, color: kRustyRed),
           ],
@@ -88,7 +90,7 @@ class _HomeState extends State<HomePage> {
           IconButton(
             icon: Icon(Icons.person_2_rounded),
             onPressed: () {
-              Navigator.pushNamed(context, '/profile');
+              Navigator.push(context, MaterialPageRoute(builder: (context) => ProfilePage()));
             },
           ),
         ],
