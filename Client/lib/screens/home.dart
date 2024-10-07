@@ -2,17 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:food_ape/constants/theme.dart';
 import 'package:food_ape/screens/cart.dart';
 import 'package:food_ape/screens/favFood.dart';
+import 'package:food_ape/screens/home_content.dart';
 import 'package:food_ape/screens/messMenu.dart';
-import 'package:food_ape/screens/notifi.dart';
+import 'package:food_ape/screens/notification.dart';
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
+class Home extends StatefulWidget {
+  const Home({super.key});
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MyHomePageState extends State<Home> {
   int _selectedIndex = 1; // Set default selected index (home page)
 
   void _onItemTapped(int index) {
@@ -26,6 +27,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton.large(
+        shape: CircleBorder(),
         backgroundColor: kPrimaryColor,
         hoverColor: kRustyRed,
         child: const Icon(Icons.food_bank_rounded),
@@ -35,11 +37,17 @@ class _MyHomePageState extends State<MyHomePage> {
         },
       ),
       bottomNavigationBar: BottomAppBar(
+        elevation: 10,
         surfaceTintColor: kPrimaryColor,
         shadowColor: Colors.black,
         color: k2ScaffoldBackgroundColor,
-        shape: CircularNotchedRectangle(),
-        notchMargin: 2.0,
+        shape: AutomaticNotchedShape(
+          RoundedRectangleBorder(),
+          StadiumBorder(
+            side: BorderSide(),
+          ),
+        ),
+        notchMargin: 5.0,
         child: Row(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -82,7 +90,7 @@ class _MyHomePageState extends State<MyHomePage> {
         index: _selectedIndex,
         children: <Widget>[
           MessMenuPage(),
-          Center(child: Text('Home Page')), // Placeholder for home page content
+          HomePage(), // Placeholder for home page content
           FavFoodPage(),
           NotificationPage(),
         ],

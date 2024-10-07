@@ -21,14 +21,14 @@ class _SignUpPageState extends State<SignUpPage>
   TextEditingController usernameController = TextEditingController();
   String hostelController = "";
   TextEditingController passwordController = TextEditingController();
-  TextEditingController roomNoController = TextEditingController();
+  TextEditingController nameController = TextEditingController();
   bool obscurePassword = true;
   String? dropdownValue;
   bool isHosteler = false;
   String? emailError;
   String validationFlag = '';
   Future<void> _signUp(String email, String password, String mobile,
-      String regNo, String roomNo, String messType, String hostel) async {
+      String regNo, String name, String messType, String hostel) async {
     try {
       var url = Uri.parse(
           'http://192.168.137.1:3000/auth/signup'); // Use appropriate URL for emulator
@@ -40,7 +40,7 @@ class _SignUpPageState extends State<SignUpPage>
         'email': email,
         'mobile': mobile,
         'hostel': hostel,
-        'roomNo': roomNo,
+        'name': name,
         'messType': messType,
         'password': password,
       };
@@ -182,6 +182,24 @@ class _SignUpPageState extends State<SignUpPage>
                           decoration: InputDecoration(
                             labelText: 'MOBILE',
                             hintText: 'Enter your mobile number',
+                            hintStyle: kFadeBodyMedium.bodyMedium,
+                            border: InputBorder.none,
+                            contentPadding: EdgeInsets.symmetric(
+                                horizontal: 16, vertical: 12),
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 20),
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: kCanvasColor,
+                        ),
+                        child: TextField(
+                          controller: nameController,
+                          decoration: InputDecoration(
+                            labelText: 'Name',
+                            hintText: 'Enter your name',
                             hintStyle: kFadeBodyMedium.bodyMedium,
                             border: InputBorder.none,
                             contentPadding: EdgeInsets.symmetric(
@@ -539,6 +557,7 @@ class _SignUpPageState extends State<SignUpPage>
                       //     ),
                       //   ),
                       // ),
+
                       SizedBox(height: 20),
                       Container(
                         decoration: BoxDecoration(
@@ -576,7 +595,7 @@ class _SignUpPageState extends State<SignUpPage>
                               passwordController.text, 
                               mobileController.text, 
                               regNoController.text, 
-                              roomNoController.text, 
+                              nameController.text, 
                               messTypeController, 
                               hostelController);
                             if(validationFlag == 'success') {
@@ -595,7 +614,7 @@ class _SignUpPageState extends State<SignUpPage>
                               print('Reg. No: ${regNoController.text}');
                               print('Username: ${usernameController.text}');
                               print('Hostel: $hostelController');
-                              print('Room No: ${roomNoController.text}');
+                              print('Name: ${nameController.text}');
                               print('Mess Type: $messTypeController');
                               print('Password: ${passwordController.text}');
                             }
