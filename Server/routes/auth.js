@@ -1,13 +1,11 @@
 const express = require("express");
-const passport = require("passport");
 const userController = require("../controllers/auth.js");
 const router = express.Router();
 
-router.post('/login', 
-    passport.authenticate('local', { failureRedirect: '/login', failureMessage: true }), 
-    userController.login
-);
+// Call the login function from the controller
+router.post('/login', userController.login);
 
+// Other routes for signup and logout
 router.post('/signup', userController.signup);
 
 router.get('/logout', userController.logout);

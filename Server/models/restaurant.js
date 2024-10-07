@@ -1,79 +1,16 @@
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+const Order = require('./order'); 
+const Food = require('./food');
 
-const restaurantSchema = new mongoose.Schema({
-  location: {
-    type: String,
-    required: true
-  },
-  description: {
-    type: String,
-    required: true
-  },
-  rating: {
-        currentAvgRating: {
-          type: Number,
-        },
-        numberOfRatings: {
-          type: Number,
-        }
-  },
-  totalOrders: {
-    type: Number,
-    required: true,
-    default: 0
-  },
-  pendingOrders: {
-    type: Number,
-    required: true,
-    default: 0
-  },
-  completedOrders: {
-    type: Number,
-    required: true,
-    default: 0
-  },
-  menu: {
-        foodItem: {
-            name: {
-                type: String,
-                required: true
-            },
-            description: {
-                type: String,
-                required: true
-            },
-            rating: {
-              currentAvgRating: {
-                type: Number,
-              },
-              numberOfRatings: {
-                type: Number,
-              }
-            },
-            price: {
-                type: Number,
-                required: true,
-                min: 0
-            },
-            modificationOptions: {
-                type: String,
-                enum: ['None', 'Extra Cheese', 'Spicy', 'No Onions', 'Gluten Free'], // example options
-                default: 'None'
-            },
-            numberOfRatings: {
-                type: Number,
-                required: true,
-                default: 0
-            },
-            available: {
-                type: Boolean,
-                required: true,
-                default: true
-            }
-        }
-    }
+const RestaurantSchema = new Schema({
+  name: { type: String, required: true },
+  rating: { type: Number, default: 0, min: 0, max: 5 },
+  pendingOrders: { type: [String], default: [] }, 
+  phoneNumbers: { type: [String], required: true },
+  image: { type: String, default: "https://img.freepik.com/premium-vector/modern-design-concept-no-image-found-design_637684-247.jpg?w=826" },
+  menu: { type: [Food.schema], default: [] }
 });
 
-const Restaurant = mongoose.model('Restaurant', restaurantSchema);
-
+const Restaurant = mongoose.model('Restaurant', RestaurantSchema);
 module.exports = Restaurant;
