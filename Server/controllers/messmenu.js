@@ -2,6 +2,7 @@ const Messmenu = require("../models/messmenu");
 
 module.exports.getMessmenuData = async (req, res) => {
     const date = new Date().toString().split(" ")[2];
+    console.log(date);
     const messmenu = await Messmenu.findOne({ date: date });
     return { status: true, messmenu: messmenu };
 };

@@ -1,10 +1,12 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:food_ape/constants/theme.dart';
-import 'package:food_ape/screens/home.dart';
-import 'package:food_ape/screens/messMenu.dart';
-import 'package:food_ape/screens/signup.dart';
+import 'package:food_ape/models/userModel.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
+import 'package:food_ape/providers/user_provider.dart';
+import 'package:food_ape/screens/home.dart';
+import 'package:food_ape/screens/signup.dart';
+import 'package:food_ape/constants/theme.dart';
 import 'package:http/http.dart' as http;
 
 class LoginPage extends StatefulWidget {
@@ -22,7 +24,8 @@ class _LoginPageState extends State<LoginPage> {
 
   Future<bool> _login(String username, String password) async {
     try {
-      var url = Uri.parse('http://192.168.137.1:3000/auth/login'); // Use appropriate URL for emulator
+      var url = Uri.parse(
+          'http://192.168.137.1:3000/auth/login'); // Use appropriate URL for emulator
       var client = http.Client();
       Map<String, String> data = {
         'username': username,
@@ -37,81 +40,67 @@ class _LoginPageState extends State<LoginPage> {
       );
 
       if (response.statusCode == 200) {
-        print('Login successful');
-        showDialog(
-          context: context,
-          builder: (context) {
-            return AlertDialog(
-              title: Text('Login successful'),
-              content: Text('You have successfully logged in'),
-              actions: [
-                TextButton(
-                  onPressed: () {
-                    Navigator.pop(context);
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => MyHomePage()),
-                    );
-                  },
-                  child: Text('OK'),
-                ),
-              ],
-            );
-          },
-        );
-        return true;
-      } else {
-        print('Login failed ${response.statusCode}');
-        showDialog(
-          context: context,
-          builder: (context) {
-            return AlertDialog(
+        var responseBody = jsonDecode(
+            response.body); // Assuming response body contains user data
+        print(
+            'Response Body: $responseBody'); // Debugging line to print the response body
 
-              backgroundColor: kSecondaryColor,
-              title: Text('Login failed ${response.statusCode}'),
-              content: Text('Please check your credentials and try again', style: kBodyLarge.bodyLarge,),
-              actions: [
-                TextButton(
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                  child: Text('OK',
-                  
-                  style: GoogleFonts.playfairDisplaySc(
-                    color: kPrimaryColor,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
-                  ),
-                ),
-              ],
-            );
-          },
-        );
+        if (responseBody != null && responseBody['status'] == true) {
+          User user = User(
+            username:
+                username, // Using the provided username as the response does not return it
+          );
+
+          Provider.of<UserProvider>(context, listen: false).setUser(user);
+
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (context) => Home()),
+          );
+          return true;
+        } else {
+          print('Login failed: ${responseBody['message']}');
+          _showErrorDialog(responseBody['message']);
+          return false;
+        }
+      } else {
+        print('Login failed with status code: ${response.statusCode}');
+        _showErrorDialog('Login failed ${response.statusCode}');
         return false;
       }
     } catch (e) {
       print('Exception caught: $e');
-      showDialog(
-        context: context,
-        builder: (context) {
-          return AlertDialog(
-            backgroundColor: kSecondaryColor,
-            title: Text('Error'),
-            content: Text('An error occurred. Please try again.'),
-            actions: [
-              TextButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                child: Text('OK'),
-              ),
-            ],
-          );
-        },
-      );
+      _showErrorDialog('An error occurred. Please try again.');
       return false;
     }
+  }
+
+  void _showErrorDialog(String message) {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          backgroundColor: kSecondaryColor,
+          title: Text('Error'),
+          content: Text(message, style: kBodyLarge.bodyLarge),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: Text(
+                'OK',
+                style: GoogleFonts.playfairDisplaySc(
+                  color: kPrimaryColor,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ],
+        );
+      },
+    );
   }
 
   @override
@@ -128,12 +117,12 @@ class _LoginPageState extends State<LoginPage> {
                   SizedBox(height: 170),
                   Text(
                     'Log In',
-                    style: kDisplayLarge.displayLarge, // or any other appropriate TextStyle
+                    style: kDisplayLarge.displayLarge,
                   ),
                   SizedBox(height: 10),
                   Text(
                     'Sign into your existing account',
-                    style: kBodyMedium.bodyMedium, // or any other appropriate TextStyle
+                    style: kBodyMedium.bodyMedium,
                   ),
                   SizedBox(height: 50),
                 ],
@@ -171,7 +160,8 @@ class _LoginPageState extends State<LoginPage> {
                               hintText: '22XXX1234',
                               hintStyle: kFadeBodyMedium.bodyMedium,
                               border: InputBorder.none,
-                              contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                              contentPadding: EdgeInsets.symmetric(
+                                  horizontal: 16, vertical: 12),
                               errorText: emailError,
                             ),
                             validator: (value) {
@@ -195,7 +185,9 @@ class _LoginPageState extends State<LoginPage> {
                               labelText: 'PASSWORD',
                               labelStyle: kBodyMedium.bodyMedium,
                               suffixIcon: IconButton(
-                                icon: Icon(obscurePassword ? Icons.visibility_off : Icons.visibility),
+                                icon: Icon(obscurePassword
+                                    ? Icons.visibility_off
+                                    : Icons.visibility),
                                 onPressed: () {
                                   setState(() {
                                     obscurePassword = !obscurePassword;
@@ -203,7 +195,8 @@ class _LoginPageState extends State<LoginPage> {
                                 },
                               ),
                               border: InputBorder.none,
-                              contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                              contentPadding: EdgeInsets.symmetric(
+                                  horizontal: 16, vertical: 12),
                             ),
                           ),
                         ),
@@ -215,7 +208,8 @@ class _LoginPageState extends State<LoginPage> {
                               children: [
                                 Checkbox(
                                   activeColor: kRustyRed,
-                                  fillColor: MaterialStateProperty.all(kCanvasColor),
+                                  fillColor:
+                                      MaterialStateProperty.all(kCanvasColor),
                                   checkColor: kRustyRed,
                                   autofocus: true,
                                   focusColor: kRustyRed,
@@ -236,7 +230,7 @@ class _LoginPageState extends State<LoginPage> {
                               },
                               child: Text(
                                 'Forgot Password',
-                                style: kBodyLarge.bodyLarge, // or any other appropriate TextStyle
+                                style: kBodyLarge.bodyLarge,
                               ),
                             ),
                           ],
@@ -246,11 +240,9 @@ class _LoginPageState extends State<LoginPage> {
                           width: double.infinity,
                           child: ElevatedButton(
                             onPressed: () async {
-                              if (await _login(usernameController.text, passwordController.text)) {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(builder: (context) => MyHomePage()),
-                                );
+                              if (_formKey.currentState?.validate() ?? false) {
+                                await _login(usernameController.text,
+                                    passwordController.text);
                               }
                             },
                             style: ElevatedButton.styleFrom(
@@ -262,7 +254,7 @@ class _LoginPageState extends State<LoginPage> {
                             ),
                             child: Text(
                               'LOG IN',
-                              style: kDisplayMedium.displayMedium, // or any other appropriate TextStyle
+                              style: kDisplayMedium.displayMedium,
                             ),
                           ),
                         ),
@@ -272,13 +264,14 @@ class _LoginPageState extends State<LoginPage> {
                             onTap: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => SignUpPage()),
+                                MaterialPageRoute(
+                                    builder: (context) => SignUpPage()),
                               );
                             },
                             child: RichText(
                               text: TextSpan(
                                 text: "Don't have an account? ",
-                                style: kBodyMedium.bodyMedium, // or any other appropriate TextStyle
+                                style: kBodyMedium.bodyMedium,
                                 children: [
                                   TextSpan(
                                     text: 'SIGN UP',
@@ -306,6 +299,3 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 }
-
-
-
