@@ -8,16 +8,13 @@ import 'package:food_ape/screens/messMenu.dart';
 import 'package:food_ape/screens/profile.dart';
 import 'package:food_ape/screens/signup.dart';
 
-// Implement the routes for all the pages
-
 var appRoutes = {
   '/': (context) => const Home(),
-  '/home': (context) =>  HomePage(),
+  '/home': (context) => HomePage(),
   '/login': (context) => LoginPage(),
-  '/profile': (context) =>  ProfilePage(),
-  '/signup': (context) =>  SignUpPage(),
-  '/messMenu': (context) =>  MessMenuPage(),
-  '/cart': (context) =>  CartPage(),
-  '/favFood': (context) =>  FavFoodPage(),  
-  
+  '/profile': (context) => ProfilePage(),
+  '/signup': (context) => SignUpPage(),
+  '/messMenu': (context) => MessMenuPage(),
+  '/cart': (context) => CartPage(),
+  '/favFood': (context) => FavFoodPage(),
 };
