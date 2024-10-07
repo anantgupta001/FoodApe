@@ -3,9 +3,42 @@ const User = require('../models/user');
 const { getValidHostels, getValidMessTypes } = require('../init/dataLoader');
 
 
+module.exports.showProfile = async (req, res) => {
+    try {
+        const username = req.params.username;
+
+        const user = await User.findOne({ username });
+
+        if (!user) {
+            return res.status(404).send('User not found');
+        }
+
+        res.status(200).send({
+            hostel: user.hostel,
+            name: user.name,
+            messType: user.messType,
+            image: user.image
+        });
+    } catch (err) {
+        console.error(err);
+        res.status(500).send('Server Error');
+    }
+}
+
 // PUT request to update the profile
 module.exports.editProfile = async (req, res) => {
-    const { username, name, mobile, email, isHosteler, hostel, messType, currentPassword, newPassword } = req.body;
+    const { 
+        username, 
+        name, 
+        image, 
+        mobile, 
+        email, 
+        isHosteler, 
+        hostel, 
+        messType, 
+        currentPassword, 
+        newPassword 
+    } = req.body;
     try {
         const user = await User.findOne({ username });
 
@@ -21,6 +54,7 @@ module.exports.editProfile = async (req, res) => {
 
             // Update user details
             user.name = name !== undefined ? name : user.name;
+            user.image = image !== undefined ? image : user.image;
             user.mobile = mobile !== undefined ? mobile : user.mobile;
             user.email = email !== undefined ? email : user.email;
             user.isHosteler = isHosteler !== undefined ? isHosteler : user.isHosteler;

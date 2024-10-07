@@ -1,4 +1,5 @@
 const User = require("../models/user.js");
+const passport = require('passport');
 
 module.exports.signup = async (req, res) => {
     try {
@@ -57,10 +58,29 @@ module.exports.signup = async (req, res) => {
     }
 }
 
-module.exports.login = (req, res) => {
-    console.log(`User ${req.user.username} logged in successfully`);
-    res.status(200).send({ status: true, message: `User ${req.user.username} logged in successfully` });
-}
+module.exports.login = (req, res, next) => {
+    passport.authenticate('local', (err, user, info) => {
+        if (err) {
+            return next(err);  // Handle any unexpected errors
+        }
+        if (!user) {
+            // If authentication fails (wrong username or password), return an error
+            return res.status(401).json({ message: 'Invalid username or password' });
+        }
+
+        // Log the user in after successful authentication
+        req.logIn(user, (err) => {
+            if (err) {
+                return next(err);  // Handle any error during login
+            }
+
+            console.log(`User ${user.username} logged in successfully`);
+            // Send success response
+            return res.status(200).json({ status: true, message: `User ${user.username} logged in successfully` });
+        });
+    })(req, res, next);
+};
+
 
 module.exports.logout = (req, res) => {
     if (req.isAuthenticated()) {
